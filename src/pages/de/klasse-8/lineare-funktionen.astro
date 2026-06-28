@@ -15,7 +15,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<p>Verändere die Steigung m und beobachte, wie sich die Gerade dreht!</p>
 	</section>
 
-	<FunctionPlotter client:visible fn={(x, m) => m * x + 1} fnLabel="y = m·x + 1" showSlider={true} sliderLabel="m" sliderMin={-3} sliderMax={3} />
+	<FunctionPlotter client:visible fnExpr="m * x + 1" fnLabel="y = m·x + 1" showSlider={true} sliderLabel="m" sliderMin={-3} sliderMax={3} />
 
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Steigung verstehen</h3>

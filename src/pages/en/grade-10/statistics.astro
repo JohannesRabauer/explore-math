@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Normal distribution with varying spread:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, s) => Math.exp(-x*x/(2*s*s)) / (s*Math.sqrt(2*Math.PI))} fnLabel="Normal Distribution" showSlider={true} sliderLabel="σ" sliderMin={0.5} sliderMax={2} sliderStep={0.1} xMin={-5} xMax={5} yMin={0} yMax={1} />
+	<FunctionPlotter client:visible fnExpr="Math.exp(-x*x/(2*s*s)) / (s*Math.sqrt(2*Math.PI))" fnLabel="Normal Distribution" showSlider={true} sliderLabel="σ" sliderMin={0.5} sliderMax={2} sliderStep={0.1} xMin={-5} xMax={5} yMin={0} yMax={1} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Key Measures</h3>
 		<ul><li>Mean x̄ = sum ÷ count</li><li>Median = middle value (sorted)</li><li>Standard deviation σ = spread around mean</li><li>68% of data within ±1σ</li></ul>

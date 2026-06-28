@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment: Sine and Cosine</h3>
 		<p>Here's sin(x) — a wave! Change the amplitude:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, a) => a * Math.sin(x)} fnLabel="y = a·sin(x)" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.25} xMin={-7} xMax={7} />
+	<FunctionPlotter client:visible fnExpr="a * Math.sin(x)" fnLabel="y = a·sin(x)" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.25} xMin={-7} xMax={7} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Memory Aid: SOH-CAH-TOA</h3>
 		<ul>

@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment: Scaling</h3>
 		<p>Change scale factor k:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, k) => k * x} fnLabel="y = k·x (scaling)" showSlider={true} sliderLabel="k" sliderMin={0.5} sliderMax={3} sliderStep={0.25} />
+	<FunctionPlotter client:visible fnExpr="k * x" fnLabel="y = k·x (scaling)" showSlider={true} sliderLabel="k" sliderMin={0.5} sliderMax={3} sliderStep={0.25} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Intercept Theorems</h3>
 		<ul>

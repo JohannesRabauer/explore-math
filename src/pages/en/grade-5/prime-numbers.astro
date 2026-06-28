@@ -1,0 +1,33 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PrimeExplorer from '../../../components/diagrams/PrimeExplorer.svelte';
+---
+
+<Layout title="Prime Numbers & Factorization" lang="en" backHref="/explore-math/en/grade-5/" backLabel="← Grade 5">
+	<h1 class="text-3xl font-bold mb-2">Prime Numbers & Factorization</h1>
+	<p class="text-lg text-slate-600 mb-8">Discover the building blocks of all numbers</p>
+
+	<section class="prose max-w-none">
+		<h2>What are prime numbers?</h2>
+		<p>A prime number is a natural number greater than 1 that is <strong>only divisible by 1 and itself</strong>. They are the "atoms" of numbers — the smallest building blocks from which all other numbers are composed.</p>
+		<p>The first primes: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47...</p>
+
+		<h3>🧪 Experiment: Recognize primes and factorize numbers</h3>
+		<p>Choose a number with the slider. Is it prime (highlighted in yellow)? If not — what prime factors can it be broken into?</p>
+	</section>
+
+	<PrimeExplorer client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Insights</h3>
+		<ul>
+			<li><strong>2</strong> is the only even prime number</li>
+			<li>Every number has a <strong>unique</strong> prime factorization (Fundamental Theorem of Arithmetic)</li>
+			<li>Example: 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5</li>
+			<li>Primes get rarer as numbers grow — but there are <strong>infinitely many!</strong></li>
+		</ul>
+
+		<h3>🎯 Why does this matter?</h3>
+		<p>Prime factorization helps with <strong>simplifying fractions</strong> (finding common factors) and computing the <strong>LCM</strong> (least common multiple). And: Internet security relies on the fact that it's extremely hard to factorize very large numbers!</p>
+	</section>
+</Layout>

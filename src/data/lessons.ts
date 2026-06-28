@@ -5,6 +5,7 @@ export const lessons = {
     { slug: 'geometrie-grundlagen', title: 'Grundlagen der Geometrie', titleEn: 'Geometry Basics', slugEn: 'geometry-basics', desc: 'Punkte, Strecken, Geraden und erste Formen', descEn: 'Points, segments, lines and first shapes' },
     { slug: 'brueche-einfuehrung', title: 'Einführung Brüche', titleEn: 'Introduction to Fractions', slugEn: 'intro-fractions', desc: 'Was Brüche bedeuten und wie man sie darstellt', descEn: 'What fractions mean and how to represent them' },
     { slug: 'flaechen-umfang', title: 'Flächen und Umfang', titleEn: 'Area and Perimeter', slugEn: 'area-perimeter', desc: 'Rechtecke, Quadrate und ihre Maße berechnen', descEn: 'Calculate rectangles, squares and their measurements' },
+    { slug: 'primzahlen', title: 'Primzahlen & Primfaktorzerlegung', titleEn: 'Prime Numbers & Factorization', slugEn: 'prime-numbers', desc: 'Die Bausteine aller Zahlen entdecken', descEn: 'Discover the building blocks of all numbers' },
   ],
   6: [
     { slug: 'bruchrechnung', title: 'Bruchrechnung', titleEn: 'Fraction Arithmetic', slugEn: 'fraction-arithmetic', desc: 'Mit Brüchen rechnen — addieren, subtrahieren, multiplizieren', descEn: 'Calculate with fractions — add, subtract, multiply' },

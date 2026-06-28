@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Fläche unter f(x) = a·x:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="f(x) = a·x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={2} sliderStep={0.25} />
+	<FunctionPlotter client:visible fnExpr="a * x" fnLabel="f(x) = a·x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={2} sliderStep={0.25} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Grundlagen</h3>
 		<ul><li>∫xⁿ dx = xⁿ⁺¹/(n+1) + C</li><li>∫eˣ dx = eˣ + C</li><li>∫sin(x) dx = −cos(x) + C</li><li>Bestimmtes Integral: F(b) − F(a)</li></ul>

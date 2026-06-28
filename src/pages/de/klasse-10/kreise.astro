@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Verändere den Radius:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, r) => r * Math.sqrt(Math.max(0, 1 - x*x))} fnLabel="Halbkreis" showSlider={true} sliderLabel="r" sliderMin={1} sliderMax={4} sliderStep={0.5} xMin={-2} xMax={2} yMin={-1} yMax={5} />
+	<FunctionPlotter client:visible fnExpr="r * Math.sqrt(Math.max(0, 1 - x*x))" fnLabel="Halbkreis" showSlider={true} sliderLabel="r" sliderMin={1} sliderMax={4} sliderStep={0.5} xMin={-2} xMax={2} yMin={-1} yMax={5} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Formeln</h3>
 		<ul><li>Umfang: U = 2·π·r</li><li>Fläche: A = π·r²</li><li>Bogenlänge: b = (α/360°)·2πr</li><li>Sektorfläche: A = (α/360°)·πr²</li></ul>

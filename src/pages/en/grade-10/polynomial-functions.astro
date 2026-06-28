@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Cubic function with parameter:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, a) => x*x*x - a*x} fnLabel="y = x³ − a·x" showSlider={true} sliderLabel="a" sliderMin={0} sliderMax={4} sliderStep={0.5} yMin={-5} yMax={5} />
+	<FunctionPlotter client:visible fnExpr="x*x*x - a*x" fnLabel="y = x³ − a·x" showSlider={true} sliderLabel="a" sliderMin={0} sliderMax={4} sliderStep={0.5} yMin={-5} yMax={5} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Properties</h3>
 		<ul><li>Degree n → at most n zeros</li><li>Even exponents: y-axis symmetric</li><li>Odd exponents: point-symmetric</li></ul>

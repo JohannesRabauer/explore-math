@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Verändere die Basis a:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, a) => Math.pow(a, x)} fnLabel="y = a^x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.1} yMin={-1} yMax={10} />
+	<FunctionPlotter client:visible fnExpr="Math.pow(a, x)" fnLabel="y = a^x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.1} yMin={-1} yMax={10} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Erkenntnisse</h3>
 		<ul><li>a &gt; 1: exponentielles Wachstum</li><li>0 &lt; a &lt; 1: exponentieller Zerfall</li><li>Asymptote bei y=0</li><li>Verdopplungszeit: t = ln(2)/ln(a)</li></ul>

@@ -15,7 +15,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<p>Here you see y = a·x + 1. Change the slope and observe:</p>
 	</section>
 
-	<FunctionPlotter client:visible fn={(x, a) => a * x + 1} fnLabel="y = a·x + 1" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} />
+	<FunctionPlotter client:visible fnExpr="a * x + 1" fnLabel="y = a·x + 1" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} />
 
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Three Solution Methods</h3>

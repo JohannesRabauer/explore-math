@@ -1,0 +1,33 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PrimeExplorer from '../../../components/diagrams/PrimeExplorer.svelte';
+---
+
+<Layout title="Primzahlen & Primfaktorzerlegung" lang="de" backHref="/explore-math/de/klasse-5/" backLabel="← Klasse 5">
+	<h1 class="text-3xl font-bold mb-2">Primzahlen & Primfaktorzerlegung</h1>
+	<p class="text-lg text-slate-600 mb-8">Die Bausteine aller Zahlen entdecken</p>
+
+	<section class="prose max-w-none">
+		<h2>Was sind Primzahlen?</h2>
+		<p>Eine Primzahl ist eine natürliche Zahl größer als 1, die <strong>nur durch 1 und sich selbst</strong> teilbar ist. Sie sind die "Atome" der Zahlen — die kleinsten Bausteine, aus denen alle anderen Zahlen zusammengesetzt sind.</p>
+		<p>Die ersten Primzahlen: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47...</p>
+
+		<h3>🧪 Experiment: Primzahlen erkennen und Zahlen zerlegen</h3>
+		<p>Wähle eine Zahl mit dem Regler. Ist sie eine Primzahl (gelb markiert)? Wenn nicht — in welche Primfaktoren lässt sie sich zerlegen?</p>
+	</section>
+
+	<PrimeExplorer client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Erkenntnisse</h3>
+		<ul>
+			<li><strong>2</strong> ist die einzige gerade Primzahl</li>
+			<li>Jede Zahl lässt sich <strong>eindeutig</strong> in Primfaktoren zerlegen (Fundamentalsatz der Arithmetik)</li>
+			<li>Beispiel: 60 = 2 × 2 × 3 × 5 = 2² × 3 × 5</li>
+			<li>Primzahlen werden nach oben hin seltener — aber es gibt <strong>unendlich viele!</strong></li>
+		</ul>
+
+		<h3>🎯 Wozu braucht man das?</h3>
+		<p>Primfaktorzerlegung hilft beim <strong>Kürzen von Brüchen</strong> (gemeinsame Faktoren finden) und beim Berechnen des <strong>kgV</strong> (kleinstes gemeinsames Vielfaches). Und: Die Sicherheit im Internet basiert darauf, dass es extrem schwer ist, sehr große Zahlen in ihre Primfaktoren zu zerlegen!</p>
+	</section>
+</Layout>

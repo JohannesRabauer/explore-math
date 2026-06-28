@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Beobachte f(x) = x·sin(x):</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x) => x * Math.sin(x)} fnLabel="f(x) = x·sin(x)" xMin={-7} xMax={7} yMin={-5} yMax={7} />
+	<FunctionPlotter client:visible fnExpr="x * Math.sin(x)" fnLabel="f(x) = x·sin(x)" xMin={-7} xMax={7} yMin={-5} yMax={7} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Die drei Regeln</h3>
 		<ul><li>Produktregel: (f·g)' = f'·g + f·g'</li><li>Quotientenregel: (f/g)' = (f'·g − f·g') / g²</li><li>Kettenregel: (f(g(x)))' = f'(g(x)) · g'(x)</li></ul>

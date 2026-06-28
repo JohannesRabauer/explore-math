@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Kreis x² + y² = r²:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, r) => Math.sqrt(Math.max(0, r*r - x*x))} fnLabel="y = √(r²−x²)" showSlider={true} sliderLabel="r" sliderMin={1} sliderMax={4} xMin={-5} xMax={5} yMin={-1} yMax={5} />
+	<FunctionPlotter client:visible fnExpr="Math.sqrt(Math.max(0, r*r - x*x))" fnLabel="y = √(r²−x²)" showSlider={true} sliderLabel="r" sliderMin={1} sliderMax={4} xMin={-5} xMax={5} yMin={-1} yMax={5} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Werkzeuge</h3>
 		<ul><li>Kreuzprodukt: orthogonaler Vektor</li><li>Punkt-Gerade-Abstand</li><li>Winkel: cos(α) = (a·b)/(|a|·|b|)</li></ul>

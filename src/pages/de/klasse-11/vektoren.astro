@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Richtungsvektoren als Geraden:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="Richtung (1, a)" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.25} />
+	<FunctionPlotter client:visible fnExpr="a * x" fnLabel="Richtung (1, a)" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.25} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Operationen</h3>
 		<ul><li>Addition: komponentenweise</li><li>Skalarprodukt: a·b = a₁b₁ + a₂b₂ + a₃b₃</li><li>Betrag: |v| = √(x² + y² + z²)</li><li>Orthogonal wenn a·b = 0</li></ul>

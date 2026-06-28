@@ -14,7 +14,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<p>Verändere a und beobachte: Wann wird die Parabel schmaler? Wann öffnet sie sich nach unten?</p>
 	</section>
 
-	<FunctionPlotter client:visible fn={(x, a) => a * x * x} fnLabel="y = a·x²" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.1} yMin={-5} yMax={10} />
+	<FunctionPlotter client:visible fnExpr="a * x * x" fnLabel="y = a·x²" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.1} yMin={-5} yMax={10} />
 
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Scheitelpunktform</h3>

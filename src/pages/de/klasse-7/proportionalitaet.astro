@@ -16,7 +16,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<p>Die Gerade y = a·x geht immer durch (0,0). Verändere a — das ist der Proportionalitätsfaktor!</p>
 	</section>
 
-	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="y = a·x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.25} />
+	<FunctionPlotter client:visible fnExpr="a * x" fnLabel="y = a·x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.25} />
 
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Erkennung</h3>

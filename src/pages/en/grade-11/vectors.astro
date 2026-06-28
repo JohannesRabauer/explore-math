@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Direction vectors as lines:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="Direction (1, a)" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.25} />
+	<FunctionPlotter client:visible fnExpr="a * x" fnLabel="Direction (1, a)" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.25} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Operations</h3>
 		<ul><li>Addition: component-wise</li><li>Dot product: a·b = a₁b₁ + a₂b₂ + a₃b₃</li><li>Magnitude: |v| = √(x² + y² + z²)</li><li>Orthogonal when a·b = 0</li></ul>

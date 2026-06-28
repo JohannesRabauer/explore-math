@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Observe f(x) = x²:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x) => x*x} fnLabel="f(x) = x²" xMin={-3} xMax={3} yMin={-1} yMax={9} />
+	<FunctionPlotter client:visible fnExpr="x*x" fnLabel="f(x) = x²" xMin={-3} xMax={3} yMin={-1} yMax={9} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Rules</h3>
 		<ul><li>f(x) = xⁿ → f'(x) = n·xⁿ⁻¹</li><li>f(x) = eˣ → f'(x) = eˣ</li><li>f(x) = sin(x) → f'(x) = cos(x)</li><li>Sum rule: (f+g)' = f' + g'</li></ul>

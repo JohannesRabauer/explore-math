@@ -15,7 +15,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<p>The term 2x + 1 gives a different value for each x. Change x and see the result:</p>
 	</section>
 
-	<FunctionPlotter client:visible fn={(x) => 2*x + 1} fnLabel="f(x) = 2x + 1" />
+	<FunctionPlotter client:visible fnExpr="2*x + 1" fnLabel="f(x) = 2x + 1" />
 
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Simplifying Terms</h3>

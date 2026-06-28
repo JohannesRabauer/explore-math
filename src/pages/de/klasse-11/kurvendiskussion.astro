@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Analysiere f(x) = x³ − 3x:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x) => x*x*x - 3*x} fnLabel="f(x) = x³ − 3x" xMin={-3} xMax={3} yMin={-5} yMax={5} />
+	<FunctionPlotter client:visible fnExpr="x*x*x - 3*x" fnLabel="f(x) = x³ − 3x" xMin={-3} xMax={3} yMin={-5} yMax={5} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Checkliste</h3>
 		<ul><li>Nullstellen: f(x) = 0</li><li>Extrema: f'(x) = 0</li><li>Wendepunkte: f''(x) = 0</li><li>Monotonie: f'(x) &gt; 0 steigend</li></ul>

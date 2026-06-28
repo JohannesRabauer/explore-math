@@ -12,7 +12,7 @@ import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte
 		<h3>🧪 Experiment</h3>
 		<p>Logistische Kurve:</p>
 	</section>
-	<FunctionPlotter client:visible fn={(x, k) => 1/(1+Math.exp(-k*x))} fnLabel="1/(1+e^(-kx))" showSlider={true} sliderLabel="k" sliderMin={0.5} sliderMax={3} sliderStep={0.25} xMin={-5} xMax={5} yMin={0} yMax={1.2} />
+	<FunctionPlotter client:visible fnExpr="1/(1+Math.exp(-k*x))" fnLabel="1/(1+e^(-kx))" showSlider={true} sliderLabel="k" sliderMin={0.5} sliderMax={3} sliderStep={0.25} xMin={-5} xMax={5} yMin={0} yMax={1.2} />
 	<section class="prose max-w-none mt-8">
 		<h3>💡 Modelle</h3>
 		<ul><li>Exponentiell: f'(t) = k·f(t)</li><li>Beschränkt: f'(t) = k·(S−f(t))</li><li>Logistisch: S-förmige Kurve</li></ul>
