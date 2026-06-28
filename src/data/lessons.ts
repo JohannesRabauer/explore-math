@@ -1,0 +1,58 @@
+export const lessons = {
+  5: [
+    { slug: 'natuerliche-zahlen', title: 'Natürliche Zahlen', titleEn: 'Natural Numbers', slugEn: 'natural-numbers', desc: 'Zahlensysteme verstehen und mit großen Zahlen arbeiten', descEn: 'Understand number systems and work with large numbers' },
+    { slug: 'grundrechenarten', title: 'Grundrechenarten', titleEn: 'Basic Operations', slugEn: 'basic-operations', desc: 'Addition, Subtraktion, Multiplikation und Division meistern', descEn: 'Master addition, subtraction, multiplication and division' },
+    { slug: 'geometrie-grundlagen', title: 'Grundlagen der Geometrie', titleEn: 'Geometry Basics', slugEn: 'geometry-basics', desc: 'Punkte, Strecken, Geraden und erste Formen', descEn: 'Points, segments, lines and first shapes' },
+    { slug: 'brueche-einfuehrung', title: 'Einführung Brüche', titleEn: 'Introduction to Fractions', slugEn: 'intro-fractions', desc: 'Was Brüche bedeuten und wie man sie darstellt', descEn: 'What fractions mean and how to represent them' },
+    { slug: 'flaechen-umfang', title: 'Flächen und Umfang', titleEn: 'Area and Perimeter', slugEn: 'area-perimeter', desc: 'Rechtecke, Quadrate und ihre Maße berechnen', descEn: 'Calculate rectangles, squares and their measurements' },
+  ],
+  6: [
+    { slug: 'bruchrechnung', title: 'Bruchrechnung', titleEn: 'Fraction Arithmetic', slugEn: 'fraction-arithmetic', desc: 'Mit Brüchen rechnen — addieren, subtrahieren, multiplizieren', descEn: 'Calculate with fractions — add, subtract, multiply' },
+    { slug: 'dezimalzahlen', title: 'Dezimalzahlen', titleEn: 'Decimals', slugEn: 'decimals', desc: 'Dezimalzahlen verstehen und umrechnen', descEn: 'Understand and convert decimal numbers' },
+    { slug: 'verhaeltnisse', title: 'Verhältnisse und Proportionen', titleEn: 'Ratios and Proportions', slugEn: 'ratios-proportions', desc: 'Verhältnisse erkennen und anwenden', descEn: 'Recognize and apply ratios' },
+    { slug: 'winkel', title: 'Winkel', titleEn: 'Angles', slugEn: 'angles', desc: 'Winkel messen, zeichnen und berechnen', descEn: 'Measure, draw and calculate angles' },
+    { slug: 'daten-zufall', title: 'Daten und Zufall', titleEn: 'Data and Chance', slugEn: 'data-chance', desc: 'Erste Schritte in Statistik und Wahrscheinlichkeit', descEn: 'First steps in statistics and probability' },
+  ],
+  7: [
+    { slug: 'ganze-zahlen', title: 'Ganze Zahlen', titleEn: 'Integers', slugEn: 'integers', desc: 'Negative Zahlen verstehen und mit ihnen rechnen', descEn: 'Understand negative numbers and calculate with them' },
+    { slug: 'lineare-gleichungen', title: 'Lineare Gleichungen', titleEn: 'Linear Equations', slugEn: 'linear-equations', desc: 'Gleichungen aufstellen und lösen', descEn: 'Set up and solve equations' },
+    { slug: 'proportionalitaet', title: 'Proportionalität', titleEn: 'Proportionality', slugEn: 'proportionality', desc: 'Direkte und indirekte Proportionalität erkennen', descEn: 'Recognize direct and inverse proportionality' },
+    { slug: 'dreiecke', title: 'Dreiecke', titleEn: 'Triangles', slugEn: 'triangles', desc: 'Dreieckskonstruktion und Kongruenzsätze', descEn: 'Triangle construction and congruence' },
+    { slug: 'terme', title: 'Terme und Variablen', titleEn: 'Terms and Variables', slugEn: 'terms-variables', desc: 'Mit Buchstaben rechnen lernen', descEn: 'Learn to calculate with letters' },
+  ],
+  8: [
+    { slug: 'lineare-funktionen', title: 'Lineare Funktionen', titleEn: 'Linear Functions', slugEn: 'linear-functions', desc: 'Geraden, Steigung und y-Achsenabschnitt', descEn: 'Lines, slope and y-intercept' },
+    { slug: 'pythagoras', title: 'Satz des Pythagoras', titleEn: 'Pythagorean Theorem', slugEn: 'pythagorean-theorem', desc: 'Den berühmtesten Satz der Geometrie entdecken', descEn: 'Discover the most famous theorem in geometry' },
+    { slug: 'wahrscheinlichkeit', title: 'Wahrscheinlichkeit', titleEn: 'Probability', slugEn: 'probability', desc: 'Chancen berechnen und Zufallsexperimente verstehen', descEn: 'Calculate chances and understand random experiments' },
+    { slug: 'gleichungssysteme', title: 'Gleichungssysteme', titleEn: 'Systems of Equations', slugEn: 'systems-equations', desc: 'Zwei Gleichungen, zwei Unbekannte — drei Lösungswege', descEn: 'Two equations, two unknowns — three solution methods' },
+    { slug: 'flaechen-koerper', title: 'Flächen und Körper', titleEn: 'Areas and Solids', slugEn: 'areas-solids', desc: 'Oberfläche und Volumen von Prismen und Zylindern', descEn: 'Surface area and volume of prisms and cylinders' },
+  ],
+  9: [
+    { slug: 'quadratische-funktionen', title: 'Quadratische Funktionen', titleEn: 'Quadratic Functions', slugEn: 'quadratic-functions', desc: 'Parabeln verstehen und Scheitelpunkt bestimmen', descEn: 'Understand parabolas and find the vertex' },
+    { slug: 'potenzen-wurzeln', title: 'Potenzen und Wurzeln', titleEn: 'Powers and Roots', slugEn: 'powers-roots', desc: 'Potenzgesetze und Wurzelrechnung', descEn: 'Power laws and root calculations' },
+    { slug: 'aehnlichkeit', title: 'Ähnlichkeit', titleEn: 'Similarity', slugEn: 'similarity', desc: 'Ähnliche Figuren und Strahlensätze', descEn: 'Similar figures and intercept theorems' },
+    { slug: 'trigonometrie', title: 'Trigonometrie Grundlagen', titleEn: 'Trigonometry Basics', slugEn: 'trigonometry-basics', desc: 'Sinus, Kosinus und Tangens im rechtwinkligen Dreieck', descEn: 'Sine, cosine and tangent in right triangles' },
+    { slug: 'quadratische-gleichungen', title: 'Quadratische Gleichungen', titleEn: 'Quadratic Equations', slugEn: 'quadratic-equations', desc: 'Die p-q-Formel und Lösungsverfahren', descEn: 'The quadratic formula and solution methods' },
+  ],
+  10: [
+    { slug: 'exponentialfunktionen', title: 'Exponentialfunktionen', titleEn: 'Exponential Functions', slugEn: 'exponential-functions', desc: 'Wachstum und Zerfall mathematisch beschreiben', descEn: 'Describe growth and decay mathematically' },
+    { slug: 'kreise', title: 'Kreisberechnungen', titleEn: 'Circle Calculations', slugEn: 'circle-calculations', desc: 'Umfang, Fläche, Kreissektoren und Bogenlänge', descEn: 'Circumference, area, sectors and arc length' },
+    { slug: 'statistik', title: 'Statistik', titleEn: 'Statistics', slugEn: 'statistics', desc: 'Daten auswerten mit Mittelwert, Median und Streuung', descEn: 'Analyze data with mean, median and deviation' },
+    { slug: 'polynomfunktionen', title: 'Polynomfunktionen', titleEn: 'Polynomial Functions', slugEn: 'polynomial-functions', desc: 'Ganzrationale Funktionen und ihre Eigenschaften', descEn: 'Polynomial functions and their properties' },
+    { slug: 'logarithmen', title: 'Logarithmen', titleEn: 'Logarithms', slugEn: 'logarithms', desc: 'Die Umkehrung des Potenzierens verstehen', descEn: 'Understand the inverse of exponentiation' },
+  ],
+  11: [
+    { slug: 'differentialrechnung', title: 'Differentialrechnung', titleEn: 'Differential Calculus', slugEn: 'differential-calculus', desc: 'Ableitung als Steigung — Grundlagen der Analysis', descEn: 'Derivative as slope — foundations of calculus' },
+    { slug: 'kurvendiskussion', title: 'Kurvendiskussion', titleEn: 'Curve Analysis', slugEn: 'curve-analysis', desc: 'Funktionen vollständig analysieren', descEn: 'Completely analyze functions' },
+    { slug: 'vektoren', title: 'Vektoren', titleEn: 'Vectors', slugEn: 'vectors', desc: 'Rechnen im Raum mit Vektoren', descEn: 'Calculate in space with vectors' },
+    { slug: 'geraden-ebenen', title: 'Geraden und Ebenen', titleEn: 'Lines and Planes', slugEn: 'lines-planes', desc: 'Analytische Geometrie im dreidimensionalen Raum', descEn: 'Analytical geometry in three-dimensional space' },
+    { slug: 'ableitungsregeln', title: 'Ableitungsregeln', titleEn: 'Differentiation Rules', slugEn: 'differentiation-rules', desc: 'Produkt-, Quotienten- und Kettenregel', descEn: 'Product, quotient and chain rule' },
+  ],
+  12: [
+    { slug: 'integralrechnung', title: 'Integralrechnung', titleEn: 'Integral Calculus', slugEn: 'integral-calculus', desc: 'Flächen unter Kurven berechnen', descEn: 'Calculate areas under curves' },
+    { slug: 'stochastik', title: 'Stochastik', titleEn: 'Stochastics', slugEn: 'stochastics', desc: 'Binomialverteilung und Hypothesentests', descEn: 'Binomial distribution and hypothesis testing' },
+    { slug: 'analytische-geometrie', title: 'Analytische Geometrie', titleEn: 'Analytical Geometry', slugEn: 'analytical-geometry', desc: 'Abstände, Winkel und Lagebeziehungen im Raum', descEn: 'Distances, angles and spatial relationships' },
+    { slug: 'wachstumsmodelle', title: 'Wachstumsmodelle', titleEn: 'Growth Models', slugEn: 'growth-models', desc: 'Exponentielles und logistisches Wachstum modellieren', descEn: 'Model exponential and logistic growth' },
+    { slug: 'integrationsmethoden', title: 'Integrationsmethoden', titleEn: 'Integration Methods', slugEn: 'integration-methods', desc: 'Substitution, partielle Integration und mehr', descEn: 'Substitution, integration by parts and more' },
+  ],
+} as const;
