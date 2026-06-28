@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Geraden und Ebenen" lang="de" backHref="/explore-math/de/klasse-11/" backLabel="← Klasse 11">
+	<h1 class="text-3xl font-bold mb-2">Geraden und Ebenen</h1>
+	<p class="text-lg text-slate-600 mb-8">Analytische Geometrie im 3D-Raum</p>
+	<section class="prose max-w-none">
+		<h2>3D-Geometrie</h2>
+		<p>Geraden: r = p + t·v. Ebenen: r = p + s·u + t·v.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Parameterdarstellung:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => a + 0.5*x} fnLabel="y = a + 0.5x" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Lagebeziehungen</h3>
+		<ul><li>Geraden: parallel, schneidend, windschief</li><li>Gerade-Ebene: parallel, schneidend, enthalten</li><li>Abstand: d = |n·(p−q)| / |n|</li></ul>
+	</section>
+</Layout>

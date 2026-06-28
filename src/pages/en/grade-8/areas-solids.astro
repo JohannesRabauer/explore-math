@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GeometryCanvas from '../../../components/diagrams/GeometryCanvas.svelte';
+---
+
+<Layout title="Areas and Solids" lang="en" backHref="/explore-math/en/grade-8/" backLabel="← Grade 8">
+	<h1 class="text-3xl font-bold mb-2">Areas and Solids</h1>
+	<p class="text-lg text-slate-600 mb-8">Surface area and volume of prisms and cylinders</p>
+
+	<section class="prose max-w-none">
+		<h2>From 2D to 3D</h2>
+		<p>A prism is created by "pulling" a flat shape upward. Volume = base area × height. Surface area = 2 × base + lateral surface.</p>
+
+		<h3>🧪 Experiment: Base Areas</h3>
+		<p>Change the triangular base — the prism volume is this area times the height!</p>
+	</section>
+
+	<GeometryCanvas client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Formulas</h3>
+		<ul>
+			<li><strong>Prism:</strong> V = B · h, SA = 2B + lateral</li>
+			<li><strong>Cylinder:</strong> V = π·r²·h, SA = 2·π·r² + 2·π·r·h</li>
+			<li><strong>Pyramid:</strong> V = ⅓ · B · h</li>
+			<li><strong>Cone:</strong> V = ⅓ · π·r² · h</li>
+		</ul>
+		<p>Remember: Pointed solids (pyramid, cone) have ⅓ the volume of their "straight" relatives!</p>
+	</section>
+</Layout>

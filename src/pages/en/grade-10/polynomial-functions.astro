@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Polynomial Functions" lang="en" backHref="/explore-math/en/grade-10/" backLabel="← Grade 10">
+	<h1 class="text-3xl font-bold mb-2">Polynomial Functions</h1>
+	<p class="text-lg text-slate-600 mb-8">Polynomial functions and their properties</p>
+	<section class="prose max-w-none">
+		<h2>Higher Powers</h2>
+		<p>Polynomials are sums of power functions. Higher degree means more turning points.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Cubic function with parameter:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => x*x*x - a*x} fnLabel="y = x³ − a·x" showSlider={true} sliderLabel="a" sliderMin={0} sliderMax={4} sliderStep={0.5} yMin={-5} yMax={5} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Properties</h3>
+		<ul><li>Degree n → at most n zeros</li><li>Even exponents: y-axis symmetric</li><li>Odd exponents: point-symmetric</li></ul>
+	</section>
+</Layout>

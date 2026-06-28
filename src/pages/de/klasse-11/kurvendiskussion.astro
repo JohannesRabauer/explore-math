@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Kurvendiskussion" lang="de" backHref="/explore-math/de/klasse-11/" backLabel="← Klasse 11">
+	<h1 class="text-3xl font-bold mb-2">Kurvendiskussion</h1>
+	<p class="text-lg text-slate-600 mb-8">Funktionen vollständig analysieren</p>
+	<section class="prose max-w-none">
+		<h2>Alles über eine Funktion</h2>
+		<p>Nullstellen, Extrema, Wendepunkte — mit Ableitungen finden wir alles.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Analysiere f(x) = x³ − 3x:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x) => x*x*x - 3*x} fnLabel="f(x) = x³ − 3x" xMin={-3} xMax={3} yMin={-5} yMax={5} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Checkliste</h3>
+		<ul><li>Nullstellen: f(x) = 0</li><li>Extrema: f'(x) = 0</li><li>Wendepunkte: f''(x) = 0</li><li>Monotonie: f'(x) &gt; 0 steigend</li></ul>
+	</section>
+</Layout>

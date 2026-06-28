@@ -1,0 +1,26 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FractionVisualizer from '../../../components/diagrams/FractionVisualizer.svelte';
+---
+
+<Layout title="Verhältnisse und Proportionen" lang="de" backHref="/explore-math/de/klasse-6/" backLabel="← Klasse 6">
+	<h1 class="text-3xl font-bold mb-2">Verhältnisse und Proportionen</h1>
+	<p class="text-lg text-slate-600 mb-8">Verhältnisse erkennen und anwenden</p>
+
+	<section class="prose max-w-none">
+		<h2>Was ist ein Verhältnis?</h2>
+		<p>Ein Verhältnis vergleicht zwei Größen: "Auf 3 Äpfel kommen 2 Birnen" = 3:2. Verhältnisse sind überall: in Rezepten, auf Landkarten, bei Mischungen.</p>
+
+		<h3>🧪 Experiment: Verhältnisse sehen</h3>
+		<p>Wenn das Verhältnis 3:5 ist, welcher Anteil ist farbig? Stelle verschiedene Verhältnisse ein:</p>
+	</section>
+
+	<FractionVisualizer client:visible numerator={3} denominator={5} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Proportionen</h3>
+		<p>Wenn zwei Verhältnisse gleich sind, nennt man das eine <strong>Proportion</strong>: 2:3 = 4:6 = 6:9</p>
+		<p><strong>Dreisatz:</strong> 3 Äpfel kosten 1,50€. Was kosten 7 Äpfel?</p>
+		<p>3 → 1,50€ | 1 → 0,50€ | 7 → 3,50€</p>
+	</section>
+</Layout>

@@ -1,0 +1,24 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Trigonometry Basics" lang="en" backHref="/explore-math/en/grade-9/" backLabel="← Grade 9">
+	<h1 class="text-3xl font-bold mb-2">Trigonometry Basics</h1>
+	<p class="text-lg text-slate-600 mb-8">Sine, cosine and tangent in right triangles</p>
+	<section class="prose max-w-none">
+		<h2>The Trigonometric Ratios</h2>
+		<p>sin(α) = opposite/hypotenuse, cos(α) = adjacent/hypotenuse, tan(α) = opposite/adjacent</p>
+		<h3>🧪 Experiment: Sine and Cosine</h3>
+		<p>Here's sin(x) — a wave! Change the amplitude:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => a * Math.sin(x)} fnLabel="y = a·sin(x)" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.25} xMin={-7} xMax={7} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Memory Aid: SOH-CAH-TOA</h3>
+		<ul>
+			<li><strong>S</strong>in = <strong>O</strong>pposite / <strong>H</strong>ypotenuse</li>
+			<li><strong>C</strong>os = <strong>A</strong>djacent / <strong>H</strong>ypotenuse</li>
+			<li><strong>T</strong>an = <strong>O</strong>pposite / <strong>A</strong>djacent</li>
+		</ul>
+	</section>
+</Layout>

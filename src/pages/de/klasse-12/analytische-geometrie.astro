@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Analytische Geometrie" lang="de" backHref="/explore-math/de/klasse-12/" backLabel="← Klasse 12">
+	<h1 class="text-3xl font-bold mb-2">Analytische Geometrie</h1>
+	<p class="text-lg text-slate-600 mb-8">Abstände, Winkel und Lagebeziehungen im Raum</p>
+	<section class="prose max-w-none">
+		<h2>Geometrie mit Algebra</h2>
+		<p>Kreuzprodukt, Abstände und Winkel im R³.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Kreis x² + y² = r²:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, r) => Math.sqrt(Math.max(0, r*r - x*x))} fnLabel="y = √(r²−x²)" showSlider={true} sliderLabel="r" sliderMin={1} sliderMax={4} xMin={-5} xMax={5} yMin={-1} yMax={5} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Werkzeuge</h3>
+		<ul><li>Kreuzprodukt: orthogonaler Vektor</li><li>Punkt-Gerade-Abstand</li><li>Winkel: cos(α) = (a·b)/(|a|·|b|)</li></ul>
+	</section>
+</Layout>

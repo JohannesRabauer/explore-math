@@ -1,0 +1,34 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import NumberLine from '../../../components/diagrams/NumberLine.svelte';
+---
+
+<Layout title="Basic Operations" lang="en" backHref="/explore-math/en/grade-5/" backLabel="← Grade 5">
+	<h1 class="text-3xl font-bold mb-2">Basic Operations</h1>
+	<p class="text-lg text-slate-600 mb-8">Master addition, subtraction, multiplication and division</p>
+
+	<section class="prose max-w-none">
+		<h2>The Four Basic Operations</h2>
+		<ul>
+			<li><strong>Addition (+)</strong> = Combining, moving forward</li>
+			<li><strong>Subtraction (−)</strong> = Taking away, moving backward</li>
+			<li><strong>Multiplication (×)</strong> = Repeated addition</li>
+			<li><strong>Division (÷)</strong> = Splitting into equal groups</li>
+		</ul>
+
+		<h3>🧪 Experiment: Addition on the Number Line</h3>
+		<p>Addition means "moving forward". Blue is at 3, orange at 8. Can you see: 3 + 5 = 8? Drag the points and discover new calculations!</p>
+	</section>
+
+	<NumberLine client:visible min={0} max={15} highlights={[3, 8]} label="Drag the points: Blue = Start, Orange = Result" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Laws of Arithmetic</h3>
+		<p><strong>Commutative law:</strong> 3 + 5 = 5 + 3 — order doesn't matter for addition and multiplication!</p>
+		<p><strong>Associative law:</strong> (2 + 3) + 4 = 2 + (3 + 4) — brackets can shift.</p>
+		<p><strong>Distributive law:</strong> 3 × (4 + 2) = 3×4 + 3×2 — multiplication distributes.</p>
+
+		<h3>🎯 Why does this matter?</h3>
+		<p>These laws help you calculate faster in your head! Example: 7 × 8 = 7 × (10 − 2) = 70 − 14 = 56</p>
+	</section>
+</Layout>

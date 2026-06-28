@@ -1,0 +1,28 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Proportionality" lang="en" backHref="/explore-math/en/grade-7/" backLabel="← Grade 7">
+	<h1 class="text-3xl font-bold mb-2">Proportionality</h1>
+	<p class="text-lg text-slate-600 mb-8">Recognize direct and inverse proportionality</p>
+
+	<section class="prose max-w-none">
+		<h2>When more really means more</h2>
+		<p><strong>Direct proportionality:</strong> Twice as much gas → drive twice as far. The graph is a line through the origin.</p>
+		<p><strong>Inverse proportionality:</strong> Twice as many workers → half the time. The graph is a hyperbola.</p>
+
+		<h3>🧪 Experiment: Seeing Proportionality</h3>
+		<p>The line y = a·x always passes through (0,0). Change a — that's the proportionality constant!</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="y = a·x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.25} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 How to Recognize</h3>
+		<ul>
+			<li><strong>Directly proportional:</strong> y/x = constant (quotient stays the same)</li>
+			<li><strong>Inversely proportional:</strong> x·y = constant (product stays the same)</li>
+		</ul>
+	</section>
+</Layout>

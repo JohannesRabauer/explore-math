@@ -1,0 +1,23 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Similarity" lang="en" backHref="/explore-math/en/grade-9/" backLabel="← Grade 9">
+	<h1 class="text-3xl font-bold mb-2">Similarity</h1>
+	<p class="text-lg text-slate-600 mb-8">Similar figures and intercept theorems</p>
+	<section class="prose max-w-none">
+		<h2>Same shape, different size</h2>
+		<p>Similar figures have the same shape but different sizes. All angles are equal, all sides in the same ratio (scale factor k).</p>
+		<h3>🧪 Experiment: Scaling</h3>
+		<p>Change scale factor k:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, k) => k * x} fnLabel="y = k·x (scaling)" showSlider={true} sliderLabel="k" sliderMin={0.5} sliderMax={3} sliderStep={0.25} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Intercept Theorems</h3>
+		<ul>
+			<li>Parallel lines create proportional segments</li>
+			<li>Areas scale with k², volumes with k³</li>
+		</ul>
+	</section>
+</Layout>

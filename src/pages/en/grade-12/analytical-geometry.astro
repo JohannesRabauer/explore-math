@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Analytical Geometry" lang="en" backHref="/explore-math/en/grade-12/" backLabel="← Grade 12">
+	<h1 class="text-3xl font-bold mb-2">Analytical Geometry</h1>
+	<p class="text-lg text-slate-600 mb-8">Distances, angles and spatial relationships</p>
+	<section class="prose max-w-none">
+		<h2>Geometry with Algebra</h2>
+		<p>Cross product, distances and angles in R³.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Circle x² + y² = r²:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, r) => Math.sqrt(Math.max(0, r*r - x*x))} fnLabel="y = √(r²−x²)" showSlider={true} sliderLabel="r" sliderMin={1} sliderMax={4} xMin={-5} xMax={5} yMin={-1} yMax={5} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Tools</h3>
+		<ul><li>Cross product: orthogonal vector</li><li>Point-line distance</li><li>Angle: cos(α) = (a·b)/(|a|·|b|)</li></ul>
+	</section>
+</Layout>

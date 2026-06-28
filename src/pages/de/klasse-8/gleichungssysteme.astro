@@ -1,0 +1,28 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Gleichungssysteme" lang="de" backHref="/explore-math/de/klasse-8/" backLabel="← Klasse 8">
+	<h1 class="text-3xl font-bold mb-2">Gleichungssysteme</h1>
+	<p class="text-lg text-slate-600 mb-8">Zwei Gleichungen, zwei Unbekannte — drei Lösungswege</p>
+
+	<section class="prose max-w-none">
+		<h2>Wo treffen sich zwei Geraden?</h2>
+		<p>Ein lineares Gleichungssystem besteht aus zwei Gleichungen. Die Lösung ist der Punkt, wo sich beide Geraden schneiden.</p>
+
+		<h3>🧪 Experiment: Schnittpunkt finden</h3>
+		<p>Hier siehst du y = x + 1. Wo schneidet sie y = −x + 3? Verändere die Steigung:</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, a) => a * x + 1} fnLabel="y = a·x + 1" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Drei Lösungsverfahren</h3>
+		<ul>
+			<li><strong>Gleichsetzungsverfahren:</strong> Beide Gleichungen nach y auflösen, dann gleichsetzen</li>
+			<li><strong>Einsetzungsverfahren:</strong> Eine Variable isolieren und in die andere einsetzen</li>
+			<li><strong>Additionsverfahren:</strong> Gleichungen so addieren, dass eine Variable wegfällt</li>
+		</ul>
+	</section>
+</Layout>

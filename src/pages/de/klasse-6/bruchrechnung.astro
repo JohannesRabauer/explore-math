@@ -1,0 +1,31 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FractionVisualizer from '../../../components/diagrams/FractionVisualizer.svelte';
+---
+
+<Layout title="Bruchrechnung" lang="de" backHref="/explore-math/de/klasse-6/" backLabel="← Klasse 6">
+	<h1 class="text-3xl font-bold mb-2">Bruchrechnung</h1>
+	<p class="text-lg text-slate-600 mb-8">Mit Brüchen rechnen — addieren, subtrahieren, multiplizieren</p>
+
+	<section class="prose max-w-none">
+		<h2>Warum braucht man den gleichen Nenner?</h2>
+		<p>Du kannst nicht einfach Äpfel und Birnen addieren. Genauso kannst du nur Bruchteile addieren, die <strong>gleich groß</strong> sind — also den gleichen Nenner haben.</p>
+		<p>¼ + ¼ = 2/4 ✓ — Aber ½ + ⅓ = ? Wir brauchen erst einen gemeinsamen Nenner!</p>
+
+		<h3>🧪 Experiment: Brüche visualisieren</h3>
+		<p>Verändere den Bruch und beobachte: Was passiert, wenn du den Nenner verdoppelst aber den Zähler auch?</p>
+	</section>
+
+	<FractionVisualizer client:visible numerator={2} denominator={6} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Regeln der Bruchrechnung</h3>
+		<ul>
+			<li><strong>Addition/Subtraktion:</strong> Erst gleichnamig machen, dann Zähler verrechnen</li>
+			<li><strong>Multiplikation:</strong> Zähler × Zähler, Nenner × Nenner</li>
+			<li><strong>Division:</strong> Mit dem Kehrwert multiplizieren (÷ ⅔ = × 3/2)</li>
+			<li><strong>Kürzen:</strong> Zähler und Nenner durch den gleichen Teiler teilen</li>
+		</ul>
+		<p>½ + ⅓ = 3/6 + 2/6 = 5/6 — Das Geheimnis: den kleinsten gemeinsamen Nenner finden!</p>
+	</section>
+</Layout>

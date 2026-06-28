@@ -1,0 +1,25 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Powers and Roots" lang="en" backHref="/explore-math/en/grade-9/" backLabel="← Grade 9">
+	<h1 class="text-3xl font-bold mb-2">Powers and Roots</h1>
+	<p class="text-lg text-slate-600 mb-8">Power laws and root calculations</p>
+	<section class="prose max-w-none">
+		<h2>What does x to the n mean?</h2>
+		<p>x³ = x·x·x — the base x is multiplied by itself n times. Roots are the inverse: √9 = 3, because 3² = 9.</p>
+		<h3>🧪 Experiment: Power Functions</h3>
+		<p>Change the exponent and observe how fast the function grows:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => Math.pow(Math.abs(x), a)} fnLabel="y = |x|^a" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.5} yMin={0} yMax={10} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Power Laws</h3>
+		<ul>
+			<li>x^a · x^b = x^(a+b)</li>
+			<li>(x^a)^b = x^(a·b)</li>
+			<li>x^(-n) = 1/x^n</li>
+			<li>x^(1/2) = √x</li>
+		</ul>
+	</section>
+</Layout>

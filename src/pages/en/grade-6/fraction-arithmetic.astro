@@ -1,0 +1,31 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FractionVisualizer from '../../../components/diagrams/FractionVisualizer.svelte';
+---
+
+<Layout title="Fraction Arithmetic" lang="en" backHref="/explore-math/en/grade-6/" backLabel="← Grade 6">
+	<h1 class="text-3xl font-bold mb-2">Fraction Arithmetic</h1>
+	<p class="text-lg text-slate-600 mb-8">Calculate with fractions — add, subtract, multiply</p>
+
+	<section class="prose max-w-none">
+		<h2>Why do we need the same denominator?</h2>
+		<p>You can't simply add apples and oranges. Similarly, you can only add fractions that are the <strong>same size</strong> — meaning they have the same denominator.</p>
+		<p>¼ + ¼ = 2/4 ✓ — But ½ + ⅓ = ? We need a common denominator first!</p>
+
+		<h3>🧪 Experiment: Visualizing Fractions</h3>
+		<p>Change the fraction and observe: what happens when you double the denominator but also double the numerator?</p>
+	</section>
+
+	<FractionVisualizer client:visible numerator={2} denominator={6} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Rules of Fraction Arithmetic</h3>
+		<ul>
+			<li><strong>Addition/Subtraction:</strong> Find common denominator first, then add/subtract numerators</li>
+			<li><strong>Multiplication:</strong> Numerator × Numerator, Denominator × Denominator</li>
+			<li><strong>Division:</strong> Multiply by the reciprocal (÷ ⅔ = × 3/2)</li>
+			<li><strong>Simplifying:</strong> Divide numerator and denominator by the same number</li>
+		</ul>
+		<p>½ + ⅓ = 3/6 + 2/6 = 5/6 — The secret: find the least common denominator!</p>
+	</section>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Lines and Planes" lang="en" backHref="/explore-math/en/grade-11/" backLabel="← Grade 11">
+	<h1 class="text-3xl font-bold mb-2">Lines and Planes</h1>
+	<p class="text-lg text-slate-600 mb-8">Analytical geometry in 3D space</p>
+	<section class="prose max-w-none">
+		<h2>3D Geometry</h2>
+		<p>Lines: r = p + t·v. Planes: r = p + s·u + t·v.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Parametric representation:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => a + 0.5*x} fnLabel="y = a + 0.5x" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Spatial Relations</h3>
+		<ul><li>Lines: parallel, intersecting, skew</li><li>Line-Plane: parallel, intersecting, contained</li><li>Distance: d = |n·(p−q)| / |n|</li></ul>
+	</section>
+</Layout>

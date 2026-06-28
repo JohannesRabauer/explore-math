@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Integration Methods" lang="en" backHref="/explore-math/en/grade-12/" backLabel="← Grade 12">
+	<h1 class="text-3xl font-bold mb-2">Integration Methods</h1>
+	<p class="text-lg text-slate-600 mb-8">Substitution, integration by parts and more</p>
+	<section class="prose max-w-none">
+		<h2>Difficult Integrals</h2>
+		<p>Not every integral is straightforward. Substitution and integration by parts help.</p>
+		<h3>🧪 Experiment</h3>
+		<p>f(x) = x·eˣ:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x) => x * Math.exp(x) * 0.1} fnLabel="x·eˣ (scaled)" xMin={-5} xMax={3} yMin={-1} yMax={3} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Methods</h3>
+		<ul><li>Substitution: ∫f(g(x))·g'(x)dx</li><li>Integration by parts: ∫u·dv = u·v − ∫v·du</li><li>Partial fractions</li></ul>
+	</section>
+</Layout>

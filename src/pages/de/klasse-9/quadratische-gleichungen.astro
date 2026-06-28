@@ -1,0 +1,25 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Quadratische Gleichungen" lang="de" backHref="/explore-math/de/klasse-9/" backLabel="← Klasse 9">
+	<h1 class="text-3xl font-bold mb-2">Quadratische Gleichungen</h1>
+	<p class="text-lg text-slate-600 mb-8">Die p-q-Formel und Lösungsverfahren</p>
+	<section class="prose max-w-none">
+		<h2>Nullstellen finden</h2>
+		<p>ax² + bx + c = 0 — wo schneidet die Parabel die x-Achse?</p>
+		<h3>🧪 Experiment</h3>
+		<p>Verändere den Parameter und beobachte die Nullstellen:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => x*x + a*x - 2} fnLabel="y = x² + a·x − 2" showSlider={true} sliderLabel="a" sliderMin={-3} sliderMax={3} yMin={-5} yMax={5} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Lösungsformel</h3>
+		<p>x₁,₂ = −p/2 ± √((p/2)² − q)</p>
+		<ul>
+			<li>Diskriminante > 0: zwei Lösungen</li>
+			<li>Diskriminante = 0: eine Lösung (Berührpunkt)</li>
+			<li>Diskriminante < 0: keine reelle Lösung</li>
+		</ul>
+	</section>
+</Layout>

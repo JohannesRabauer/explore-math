@@ -1,0 +1,31 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import AngleExplorer from '../../../components/diagrams/AngleExplorer.svelte';
+---
+
+<Layout title="Angles" lang="en" backHref="/explore-math/en/grade-6/" backLabel="← Grade 6">
+	<h1 class="text-3xl font-bold mb-2">Angles</h1>
+	<p class="text-lg text-slate-600 mb-8">Measure, draw and calculate angles</p>
+
+	<section class="prose max-w-none">
+		<h2>What is an angle?</h2>
+		<p>An angle is formed when two rays meet at a point. We measure angles in <strong>degrees (°)</strong>. A full rotation = 360°.</p>
+
+		<h3>🧪 Experiment: Discover Angle Types</h3>
+		<p>Drag the slider and observe how the angle changes. At what degrees does the angle type change?</p>
+	</section>
+
+	<AngleExplorer client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Types of Angles</h3>
+		<ul>
+			<li><strong>Acute angle:</strong> 0° to 90°</li>
+			<li><strong>Right angle:</strong> exactly 90°</li>
+			<li><strong>Obtuse angle:</strong> 90° to 180°</li>
+			<li><strong>Straight angle:</strong> exactly 180°</li>
+			<li><strong>Reflex angle:</strong> 180° to 360°</li>
+		</ul>
+		<p>Supplementary angles add up to 180°. Vertical angles are equal!</p>
+	</section>
+</Layout>

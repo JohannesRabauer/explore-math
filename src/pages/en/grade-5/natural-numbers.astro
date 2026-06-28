@@ -1,0 +1,40 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import NumberLine from '../../../components/diagrams/NumberLine.svelte';
+---
+
+<Layout title="Natural Numbers" lang="en" backHref="/explore-math/en/grade-5/" backLabel="← Grade 5">
+	<h1 class="text-3xl font-bold mb-2">Natural Numbers</h1>
+	<p class="text-lg text-slate-600 mb-8">Understand number systems and work with large numbers</p>
+
+	<section class="prose max-w-none">
+		<h2>What are natural numbers?</h2>
+		<p>Natural numbers are the numbers we use to count: 1, 2, 3, 4, 5, ... They are the simplest numbers in mathematics. We use them to count apples, days, steps — anything we can enumerate.</p>
+
+		<h3>🧪 Experiment: The Number Line</h3>
+		<p>Drag the point along the number line. Every natural number has exactly one fixed place — and between two adjacent numbers, no other natural number fits!</p>
+	</section>
+
+	<NumberLine client:visible min={0} max={20} label="Drag the point along the number line!" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 What did we discover?</h3>
+		<ul>
+			<li>Natural numbers are <strong>evenly spaced</strong> on the number line</li>
+			<li>Between two adjacent natural numbers there is no other natural number</li>
+			<li>There is no largest natural number — they go on <strong>forever</strong></li>
+			<li>Zero is the starting point (sometimes counted as natural, sometimes not)</li>
+		</ul>
+
+		<h3>📐 Place Value Chart</h3>
+		<p>Our number system is based on <strong>grouping by tens</strong>:</p>
+		<table>
+			<tr><th>Thousands</th><th>Hundreds</th><th>Tens</th><th>Ones</th></tr>
+			<tr><td>4</td><td>7</td><td>3</td><td>8</td></tr>
+		</table>
+		<p>4738 = 4×1000 + 7×100 + 3×10 + 8×1</p>
+
+		<h3>🎯 Think about it!</h3>
+		<p>Why do we use exactly 10 digits (0-9)? Because we have 10 fingers! Other cultures used different systems — the Maya used 20, computers use 2.</p>
+	</section>
+</Layout>

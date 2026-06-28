@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import NumberLine from '../../../components/diagrams/NumberLine.svelte';
+---
+
+<Layout title="Ganze Zahlen" lang="de" backHref="/explore-math/de/klasse-7/" backLabel="← Klasse 7">
+	<h1 class="text-3xl font-bold mb-2">Ganze Zahlen</h1>
+	<p class="text-lg text-slate-600 mb-8">Negative Zahlen verstehen und mit ihnen rechnen</p>
+
+	<section class="prose max-w-none">
+		<h2>Die Welt wird doppelt so groß!</h2>
+		<p>Bisher kannten wir nur Zahlen ≥ 0. Aber was ist 3 − 5? Die Antwort liegt <strong>links von der Null</strong>: −2. Negative Zahlen beschreiben Schulden, Temperaturen unter Null, Tiefe unter dem Meeresspiegel.</p>
+
+		<h3>🧪 Experiment: Der erweiterte Zahlenstrahl</h3>
+		<p>Erkunde den Zahlenstrahl mit negativen Zahlen. Wo liegt −3? Ist −5 größer oder kleiner als −2?</p>
+	</section>
+
+	<NumberLine client:visible min={-10} max={10} label="Erkunde negative Zahlen!" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Regeln für das Rechnen</h3>
+		<ul>
+			<li><strong>Plus und Minus:</strong> (+3) + (−5) = −2 (3 Schritte vor, 5 zurück)</li>
+			<li><strong>Minus mal Minus = Plus:</strong> (−3) × (−2) = +6</li>
+			<li><strong>Betrag:</strong> |−7| = 7 (Abstand zur Null, immer positiv)</li>
+		</ul>
+		<p>Eselsbrücke: "Der Feind meines Feindes ist mein Freund" → Minus × Minus = Plus!</p>
+	</section>
+</Layout>

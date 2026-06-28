@@ -1,0 +1,23 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Ähnlichkeit" lang="de" backHref="/explore-math/de/klasse-9/" backLabel="← Klasse 9">
+	<h1 class="text-3xl font-bold mb-2">Ähnlichkeit</h1>
+	<p class="text-lg text-slate-600 mb-8">Ähnliche Figuren und Strahlensätze</p>
+	<section class="prose max-w-none">
+		<h2>Gleiche Form, andere Größe</h2>
+		<p>Ähnliche Figuren haben die gleiche Form aber verschiedene Größen. Alle Winkel sind gleich, alle Seiten im gleichen Verhältnis (Streckfaktor k).</p>
+		<h3>🧪 Experiment: Streckung</h3>
+		<p>Verändere den Streckfaktor k:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, k) => k * x} fnLabel="y = k·x (Streckung)" showSlider={true} sliderLabel="k" sliderMin={0.5} sliderMax={3} sliderStep={0.25} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Strahlensätze</h3>
+		<ul>
+			<li>Parallele Linien erzeugen proportionale Abschnitte</li>
+			<li>Flächen skalieren mit k², Volumen mit k³</li>
+		</ul>
+	</section>
+</Layout>

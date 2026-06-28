@@ -1,0 +1,28 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import NumberLine from '../../../components/diagrams/NumberLine.svelte';
+---
+
+<Layout title="Decimals" lang="en" backHref="/explore-math/en/grade-6/" backLabel="← Grade 6">
+	<h1 class="text-3xl font-bold mb-2">Decimals</h1>
+	<p class="text-lg text-slate-600 mb-8">Understand and convert decimal numbers</p>
+
+	<section class="prose max-w-none">
+		<h2>Fractions as Decimals</h2>
+		<p>Decimals are just another way to write fractions! ½ = 0.5 and ¼ = 0.25. The digits after the decimal point are tenths, hundredths, thousandths...</p>
+
+		<h3>🧪 Experiment: Decimals on the Number Line</h3>
+		<p>See how decimals sit between whole numbers:</p>
+	</section>
+
+	<NumberLine client:visible min={0} max={10} label="Find the position of 3.5 on the number line!" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Conversion</h3>
+		<ul>
+			<li>Fraction → Decimal: Divide numerator by denominator (3/4 = 3÷4 = 0.75)</li>
+			<li>Decimal → Fraction: Read decimal places as tenths/hundredths (0.3 = 3/10)</li>
+			<li>Repeating decimals: ⅓ = 0.333... (infinitely many threes!)</li>
+		</ul>
+	</section>
+</Layout>

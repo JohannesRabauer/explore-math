@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Exponentialfunktionen" lang="de" backHref="/explore-math/de/klasse-10/" backLabel="← Klasse 10">
+	<h1 class="text-3xl font-bold mb-2">Exponentialfunktionen</h1>
+	<p class="text-lg text-slate-600 mb-8">Wachstum und Zerfall mathematisch beschreiben</p>
+	<section class="prose max-w-none">
+		<h2>Exponentielles Wachstum</h2>
+		<p>f(x) = a^x wächst schneller als jede Potenzfunktion. Bakterien, Zinsen, radioaktiver Zerfall.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Verändere die Basis a:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => Math.pow(a, x)} fnLabel="y = a^x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.1} yMin={-1} yMax={10} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Erkenntnisse</h3>
+		<ul><li>a &gt; 1: exponentielles Wachstum</li><li>0 &lt; a &lt; 1: exponentieller Zerfall</li><li>Asymptote bei y=0</li><li>Verdopplungszeit: t = ln(2)/ln(a)</li></ul>
+	</section>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GeometryCanvas from '../../../components/diagrams/GeometryCanvas.svelte';
+---
+
+<Layout title="Triangles" lang="en" backHref="/explore-math/en/grade-7/" backLabel="← Grade 7">
+	<h1 class="text-3xl font-bold mb-2">Triangles</h1>
+	<p class="text-lg text-slate-600 mb-8">Triangle construction and congruence</p>
+
+	<section class="prose max-w-none">
+		<h2>When are two triangles the same?</h2>
+		<p>Two triangles are <strong>congruent</strong> when they have the same shape AND size. But which information is enough to uniquely determine a triangle?</p>
+
+		<h3>🧪 Experiment: Constructing Triangles</h3>
+		<p>Drag the points and observe the congruence theorems in action!</p>
+	</section>
+
+	<GeometryCanvas client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Congruence Theorems</h3>
+		<ul>
+			<li><strong>SSS:</strong> Three sides uniquely determine a triangle</li>
+			<li><strong>SAS:</strong> Two sides and the included angle</li>
+			<li><strong>ASA:</strong> One side and the adjacent angles</li>
+			<li><strong>SSA:</strong> Two sides and the opposite angle (careful: not always unique!)</li>
+		</ul>
+	</section>
+</Layout>

@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FractionVisualizer from '../../../components/diagrams/FractionVisualizer.svelte';
+---
+
+<Layout title="Einführung Brüche" lang="de" backHref="/explore-math/de/klasse-5/" backLabel="← Klasse 5">
+	<h1 class="text-3xl font-bold mb-2">Einführung Brüche</h1>
+	<p class="text-lg text-slate-600 mb-8">Was Brüche bedeuten und wie man sie darstellt</p>
+
+	<section class="prose max-w-none">
+		<h2>Was ist ein Bruch?</h2>
+		<p>Ein Bruch beschreibt einen <strong>Teil eines Ganzen</strong>. Wenn du eine Pizza in 4 Stücke teilst und 3 nimmst, hast du ¾.</p>
+		<p>Der <strong>Nenner</strong> (unten) sagt, in wie viele Teile wir teilen. Der <strong>Zähler</strong> (oben) sagt, wie viele Teile wir nehmen.</p>
+
+		<h3>🧪 Experiment: Brüche sehen und anfassen</h3>
+		<p>Verändere Zähler und Nenner mit den Reglern. Beobachte, wie sich der Bruch visuell verändert!</p>
+	</section>
+
+	<FractionVisualizer client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Erkenntnisse</h3>
+		<ul>
+			<li>Je größer der <strong>Nenner</strong>, desto kleiner jedes einzelne Stück</li>
+			<li>Wenn Zähler = Nenner, haben wir ein <strong>Ganzes</strong> (= 1)</li>
+			<li>Wenn Zähler > Nenner, haben wir <strong>mehr als ein Ganzes</strong> (unechter Bruch)</li>
+			<li>½ = 2/4 = 3/6 — verschiedene Brüche können den gleichen Wert haben!</li>
+		</ul>
+	</section>
+</Layout>

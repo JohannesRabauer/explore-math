@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Vectors" lang="en" backHref="/explore-math/en/grade-11/" backLabel="← Grade 11">
+	<h1 class="text-3xl font-bold mb-2">Vectors</h1>
+	<p class="text-lg text-slate-600 mb-8">Calculate in space with vectors</p>
+	<section class="prose max-w-none">
+		<h2>Direction and Magnitude</h2>
+		<p>A vector has direction and magnitude. It describes displacement: v = (x, y, z).</p>
+		<h3>🧪 Experiment</h3>
+		<p>Direction vectors as lines:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="Direction (1, a)" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.25} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Operations</h3>
+		<ul><li>Addition: component-wise</li><li>Dot product: a·b = a₁b₁ + a₂b₂ + a₃b₃</li><li>Magnitude: |v| = √(x² + y² + z²)</li><li>Orthogonal when a·b = 0</li></ul>
+	</section>
+</Layout>

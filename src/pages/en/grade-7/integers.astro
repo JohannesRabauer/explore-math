@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import NumberLine from '../../../components/diagrams/NumberLine.svelte';
+---
+
+<Layout title="Integers" lang="en" backHref="/explore-math/en/grade-7/" backLabel="← Grade 7">
+	<h1 class="text-3xl font-bold mb-2">Integers</h1>
+	<p class="text-lg text-slate-600 mb-8">Understand negative numbers and calculate with them</p>
+
+	<section class="prose max-w-none">
+		<h2>The world doubles in size!</h2>
+		<p>Until now we only knew numbers ≥ 0. But what is 3 − 5? The answer lies <strong>left of zero</strong>: −2. Negative numbers describe debts, temperatures below zero, depth below sea level.</p>
+
+		<h3>🧪 Experiment: The Extended Number Line</h3>
+		<p>Explore the number line with negative numbers. Where is −3? Is −5 greater or less than −2?</p>
+	</section>
+
+	<NumberLine client:visible min={-10} max={10} label="Explore negative numbers!" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Rules for Calculation</h3>
+		<ul>
+			<li><strong>Plus and minus:</strong> (+3) + (−5) = −2 (3 steps forward, 5 back)</li>
+			<li><strong>Negative times negative = positive:</strong> (−3) × (−2) = +6</li>
+			<li><strong>Absolute value:</strong> |−7| = 7 (distance from zero, always positive)</li>
+		</ul>
+		<p>Memory trick: "The enemy of my enemy is my friend" → Negative × Negative = Positive!</p>
+	</section>
+</Layout>

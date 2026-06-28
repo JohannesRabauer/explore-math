@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ProbabilitySimulator from '../../../components/diagrams/ProbabilitySimulator.svelte';
+---
+
+<Layout title="Wahrscheinlichkeit" lang="de" backHref="/explore-math/de/klasse-8/" backLabel="← Klasse 8">
+	<h1 class="text-3xl font-bold mb-2">Wahrscheinlichkeit</h1>
+	<p class="text-lg text-slate-600 mb-8">Chancen berechnen und Zufallsexperimente verstehen</p>
+
+	<section class="prose max-w-none">
+		<h2>Zufall und Wahrscheinlichkeit</h2>
+		<p>Wahrscheinlichkeit = günstige Ergebnisse ÷ mögliche Ergebnisse. Beim fairen Würfel: P(6) = 1/6 ≈ 16,7%.</p>
+
+		<h3>🧪 Experiment: Gesetz der großen Zahlen</h3>
+		<p>Würfle oft! Bei wenigen Würfen schwankt alles wild. Bei vielen nähert sich jede Zahl den erwarteten 16,7% an.</p>
+	</section>
+
+	<ProbabilitySimulator client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Wichtige Konzepte</h3>
+		<ul>
+			<li><strong>Laplace-Experiment:</strong> Alle Ergebnisse gleich wahrscheinlich</li>
+			<li><strong>Baumdiagramm:</strong> Für mehrstufige Zufallsexperimente (Münze + Würfel)</li>
+			<li><strong>Pfadregeln:</strong> Entlang eines Pfades multiplizieren, parallele Pfade addieren</li>
+			<li><strong>Gegenwahrscheinlichkeit:</strong> P(nicht A) = 1 − P(A)</li>
+		</ul>
+	</section>
+</Layout>

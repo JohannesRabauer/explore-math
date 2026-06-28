@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Logarithms" lang="en" backHref="/explore-math/en/grade-10/" backLabel="← Grade 10">
+	<h1 class="text-3xl font-bold mb-2">Logarithms</h1>
+	<p class="text-lg text-slate-600 mb-8">Understand the inverse of exponentiation</p>
+	<section class="prose max-w-none">
+		<h2>What is a logarithm?</h2>
+		<p>log_a(x) answers: What power of a gives x? log₂(8) = 3, because 2³ = 8.</p>
+		<h3>🧪 Experiment</h3>
+		<p>The logarithm function:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => x > 0 ? Math.log(x)/Math.log(a) : undefined} fnLabel="y = log_a(x)" showSlider={true} sliderLabel="a" sliderMin={1.5} sliderMax={3} sliderStep={0.25} xMin={0} xMax={5} yMin={-3} yMax={3} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Logarithm Laws</h3>
+		<ul><li>log(a·b) = log(a) + log(b)</li><li>log(a/b) = log(a) − log(b)</li><li>log(aⁿ) = n·log(a)</li><li>ln = natural log (base e)</li></ul>
+	</section>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GeometryCanvas from '../../../components/diagrams/GeometryCanvas.svelte';
+---
+
+<Layout title="Grundlagen der Geometrie" lang="de" backHref="/explore-math/de/klasse-5/" backLabel="← Klasse 5">
+	<h1 class="text-3xl font-bold mb-2">Grundlagen der Geometrie</h1>
+	<p class="text-lg text-slate-600 mb-8">Punkte, Strecken, Geraden und erste Formen</p>
+
+	<section class="prose max-w-none">
+		<h2>Die Welt der Formen</h2>
+		<p>Geometrie ist die Mathematik der Formen und Räume. Alles beginnt mit dem <strong>Punkt</strong> — er hat keine Ausdehnung, nur eine Position.</p>
+		<p>Verbindet man zwei Punkte, entsteht eine <strong>Strecke</strong>. Drei Punkte, die nicht auf einer Linie liegen, bilden ein <strong>Dreieck</strong>.</p>
+
+		<h3>🧪 Experiment: Dreiecke erforschen</h3>
+		<p>Ziehe die Eckpunkte A, B und C! Beobachte, wie sich Seitenlängen, Winkel und Fläche verändern. Was passiert mit der Winkelsumme?</p>
+	</section>
+
+	<GeometryCanvas client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Entdeckungen</h3>
+		<ul>
+			<li>Die Winkelsumme im Dreieck ist <strong>immer 180°</strong> — egal wie du die Punkte verschiebst!</li>
+			<li>Die längste Seite liegt gegenüber dem größten Winkel</li>
+			<li>Wenn alle Seiten gleich lang sind, sind auch alle Winkel gleich (60°)</li>
+		</ul>
+	</section>
+</Layout>

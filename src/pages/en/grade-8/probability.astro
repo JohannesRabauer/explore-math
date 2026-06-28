@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ProbabilitySimulator from '../../../components/diagrams/ProbabilitySimulator.svelte';
+---
+
+<Layout title="Probability" lang="en" backHref="/explore-math/en/grade-8/" backLabel="← Grade 8">
+	<h1 class="text-3xl font-bold mb-2">Probability</h1>
+	<p class="text-lg text-slate-600 mb-8">Calculate chances and understand random experiments</p>
+
+	<section class="prose max-w-none">
+		<h2>Randomness and Probability</h2>
+		<p>Probability = favorable outcomes ÷ possible outcomes. For a fair die: P(6) = 1/6 ≈ 16.7%.</p>
+
+		<h3>🧪 Experiment: Law of Large Numbers</h3>
+		<p>Roll many times! With few rolls everything is wild. With many, each number approaches the expected 16.7%.</p>
+	</section>
+
+	<ProbabilitySimulator client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Key Concepts</h3>
+		<ul>
+			<li><strong>Equally likely outcomes:</strong> All results have the same probability</li>
+			<li><strong>Tree diagrams:</strong> For multi-stage experiments (coin + die)</li>
+			<li><strong>Path rules:</strong> Multiply along a path, add parallel paths</li>
+			<li><strong>Complement:</strong> P(not A) = 1 − P(A)</li>
+		</ul>
+	</section>
+</Layout>

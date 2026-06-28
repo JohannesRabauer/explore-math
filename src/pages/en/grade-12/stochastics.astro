@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Stochastics" lang="en" backHref="/explore-math/en/grade-12/" backLabel="← Grade 12">
+	<h1 class="text-3xl font-bold mb-2">Stochastics</h1>
+	<p class="text-lg text-slate-600 mb-8">Binomial distribution and hypothesis testing</p>
+	<section class="prose max-w-none">
+		<h2>Binomial Distribution</h2>
+		<p>How often does heads appear in 10 flips? The binomial distribution answers this.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Normal distribution approximation:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, s) => Math.exp(-x*x/(2*s*s)) / (s*Math.sqrt(2*Math.PI))} fnLabel="Normal Distribution" showSlider={true} sliderLabel="σ" sliderMin={0.5} sliderMax={2} sliderStep={0.1} xMin={-5} xMax={5} yMin={0} yMax={1} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Hypothesis Testing</h3>
+		<ul><li>H₀: Null hypothesis</li><li>H₁: Alternative hypothesis</li><li>Significance level α (usually 5%)</li><li>Determine rejection region</li></ul>
+	</section>
+</Layout>

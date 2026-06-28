@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Lineare Funktionen" lang="de" backHref="/explore-math/de/klasse-8/" backLabel="← Klasse 8">
+	<h1 class="text-3xl font-bold mb-2">Lineare Funktionen</h1>
+	<p class="text-lg text-slate-600 mb-8">Geraden, Steigung und y-Achsenabschnitt</p>
+
+	<section class="prose max-w-none">
+		<h2>Die Gleichung der Geraden: y = mx + b</h2>
+		<p><strong>m</strong> = Steigung (wie steil ist die Gerade?) und <strong>b</strong> = y-Achsenabschnitt (wo schneidet sie die y-Achse?)</p>
+
+		<h3>🧪 Experiment: Steigung verändern</h3>
+		<p>Verändere die Steigung m und beobachte, wie sich die Gerade dreht!</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, m) => m * x + 1} fnLabel="y = m·x + 1" showSlider={true} sliderLabel="m" sliderMin={-3} sliderMax={3} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Steigung verstehen</h3>
+		<ul>
+			<li>m > 0: Gerade steigt (von links nach rechts bergauf)</li>
+			<li>m < 0: Gerade fällt (bergab)</li>
+			<li>m = 0: horizontale Gerade</li>
+			<li>m = 1: Für 1 Schritt nach rechts geht es 1 Schritt nach oben</li>
+		</ul>
+		<p><strong>Steigungsdreieck:</strong> m = Δy / Δx = (y₂−y₁) / (x₂−x₁)</p>
+	</section>
+</Layout>

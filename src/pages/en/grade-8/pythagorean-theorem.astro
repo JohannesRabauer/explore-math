@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PythagorasExplorer from '../../../components/diagrams/PythagorasExplorer.svelte';
+---
+
+<Layout title="Pythagorean Theorem" lang="en" backHref="/explore-math/en/grade-8/" backLabel="← Grade 8">
+	<h1 class="text-3xl font-bold mb-2">Pythagorean Theorem</h1>
+	<p class="text-lg text-slate-600 mb-8">Discover the most famous theorem in geometry</p>
+
+	<section class="prose max-w-none">
+		<h2>a² + b² = c²</h2>
+		<p>In every right-angled triangle: the sum of the squares on the two shorter sides (legs) equals the square on the longest side (hypotenuse).</p>
+
+		<h3>🧪 Experiment: Experience Pythagoras</h3>
+		<p>Change legs a and b. Watch how c follows — and how the area equation holds!</p>
+	</section>
+
+	<PythagorasExplorer client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Applications</h3>
+		<ul>
+			<li><strong>Calculate distance:</strong> d = √((x₂−x₁)² + (y₂−y₁)²)</li>
+			<li><strong>Check if right-angled:</strong> If 3² + 4² = 5² → right angle!</li>
+			<li><strong>Pythagorean triples:</strong> (3,4,5), (5,12,13), (8,15,17)...</li>
+		</ul>
+		<p>This only works for RIGHT triangles. The hypotenuse is ALWAYS the longest side!</p>
+	</section>
+</Layout>

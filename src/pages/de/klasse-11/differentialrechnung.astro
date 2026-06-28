@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Differentialrechnung" lang="de" backHref="/explore-math/de/klasse-11/" backLabel="← Klasse 11">
+	<h1 class="text-3xl font-bold mb-2">Differentialrechnung</h1>
+	<p class="text-lg text-slate-600 mb-8">Ableitung als Steigung</p>
+	<section class="prose max-w-none">
+		<h2>Die Ableitung</h2>
+		<p>Die Ableitung gibt die momentane Änderungsrate an — die Steigung der Tangente.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Beobachte f(x) = x²:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x) => x*x} fnLabel="f(x) = x²" xMin={-3} xMax={3} yMin={-1} yMax={9} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Ableitungsregeln</h3>
+		<ul><li>f(x) = xⁿ → f'(x) = n·xⁿ⁻¹</li><li>f(x) = eˣ → f'(x) = eˣ</li><li>f(x) = sin(x) → f'(x) = cos(x)</li><li>Summenregel: (f+g)' = f' + g'</li></ul>
+	</section>
+</Layout>

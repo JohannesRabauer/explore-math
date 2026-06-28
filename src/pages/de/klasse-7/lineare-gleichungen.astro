@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Lineare Gleichungen" lang="de" backHref="/explore-math/de/klasse-7/" backLabel="← Klasse 7">
+	<h1 class="text-3xl font-bold mb-2">Lineare Gleichungen</h1>
+	<p class="text-lg text-slate-600 mb-8">Gleichungen aufstellen und lösen</p>
+
+	<section class="prose max-w-none">
+		<h2>Was ist eine Gleichung?</h2>
+		<p>Eine Gleichung ist wie eine Waage: links und rechts muss das Gleiche stehen. <strong>2x + 3 = 11</strong> — welche Zahl muss x sein?</p>
+		<p>Das Lösen einer Gleichung = die Waage im Gleichgewicht halten, während du x isolierst.</p>
+
+		<h3>🧪 Experiment: Die Gerade y = ax + b</h3>
+		<p>Jede lineare Gleichung y = ax + b erzeugt eine Gerade. Verändere den Parameter a (die Steigung):</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, a) => a * x + 1} fnLabel="y = a·x + 1" showSlider={true} sliderLabel="a" sliderMin={-3} sliderMax={3} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Gleichungen lösen — Schritt für Schritt</h3>
+		<p>Beispiel: 2x + 3 = 11</p>
+		<ol>
+			<li>Auf beiden Seiten −3: 2x = 8</li>
+			<li>Auf beiden Seiten ÷2: x = 4 ✓</li>
+		</ol>
+		<p><strong>Prinzip:</strong> Was du auf einer Seite machst, musst du auch auf der anderen machen!</p>
+	</section>
+</Layout>

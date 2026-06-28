@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GeometryCanvas from '../../../components/diagrams/GeometryCanvas.svelte';
+---
+
+<Layout title="Geometry Basics" lang="en" backHref="/explore-math/en/grade-5/" backLabel="← Grade 5">
+	<h1 class="text-3xl font-bold mb-2">Geometry Basics</h1>
+	<p class="text-lg text-slate-600 mb-8">Points, segments, lines and first shapes</p>
+
+	<section class="prose max-w-none">
+		<h2>The World of Shapes</h2>
+		<p>Geometry is the mathematics of shapes and spaces. Everything begins with the <strong>point</strong> — it has no size, only a position.</p>
+		<p>Connect two points and you get a <strong>line segment</strong>. Three points not on a line form a <strong>triangle</strong>.</p>
+
+		<h3>🧪 Experiment: Exploring Triangles</h3>
+		<p>Drag vertices A, B and C! Observe how side lengths, angles and area change. What happens to the angle sum?</p>
+	</section>
+
+	<GeometryCanvas client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Discoveries</h3>
+		<ul>
+			<li>The angle sum of a triangle is <strong>always 180°</strong> — no matter how you move the points!</li>
+			<li>The longest side is opposite the largest angle</li>
+			<li>When all sides are equal, all angles are also equal (60°)</li>
+		</ul>
+	</section>
+</Layout>

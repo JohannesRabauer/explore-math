@@ -1,0 +1,25 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Potenzen und Wurzeln" lang="de" backHref="/explore-math/de/klasse-9/" backLabel="← Klasse 9">
+	<h1 class="text-3xl font-bold mb-2">Potenzen und Wurzeln</h1>
+	<p class="text-lg text-slate-600 mb-8">Potenzgesetze und Wurzelrechnung</p>
+	<section class="prose max-w-none">
+		<h2>Was bedeutet x hoch n?</h2>
+		<p>x³ = x·x·x — die Basis x wird n-mal mit sich selbst multipliziert. Wurzeln sind die Umkehrung: √9 = 3, weil 3² = 9.</p>
+		<h3>🧪 Experiment: Potenzfunktionen</h3>
+		<p>Verändere den Exponenten und beobachte, wie schnell die Funktion wächst:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => Math.pow(Math.abs(x), a)} fnLabel="y = |x|^a" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.5} yMin={0} yMax={10} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Potenzgesetze</h3>
+		<ul>
+			<li>x^a · x^b = x^(a+b)</li>
+			<li>(x^a)^b = x^(a·b)</li>
+			<li>x^(-n) = 1/x^n</li>
+			<li>x^(1/2) = √x</li>
+		</ul>
+	</section>
+</Layout>

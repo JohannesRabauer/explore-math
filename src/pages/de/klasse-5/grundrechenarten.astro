@@ -1,0 +1,35 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import NumberLine from '../../../components/diagrams/NumberLine.svelte';
+---
+
+<Layout title="Grundrechenarten" lang="de" backHref="/explore-math/de/klasse-5/" backLabel="← Klasse 5">
+	<h1 class="text-3xl font-bold mb-2">Grundrechenarten</h1>
+	<p class="text-lg text-slate-600 mb-8">Addition, Subtraktion, Multiplikation und Division meistern</p>
+
+	<section class="prose max-w-none">
+		<h2>Die vier Grundrechenarten</h2>
+		<p>Jede Rechenart hat eine eigene Bedeutung:</p>
+		<ul>
+			<li><strong>Addition (+)</strong> = Zusammenfügen, Weitergehen</li>
+			<li><strong>Subtraktion (−)</strong> = Wegnehmen, Zurückgehen</li>
+			<li><strong>Multiplikation (×)</strong> = Wiederholtes Addieren</li>
+			<li><strong>Division (÷)</strong> = Aufteilen in gleiche Gruppen</li>
+		</ul>
+
+		<h3>🧪 Experiment: Addition auf dem Zahlenstrahl</h3>
+		<p>Addition bedeutet "weitergehen". Der blaue Punkt steht bei 3, der orangene bei 8. Kannst du erkennen: 3 + 5 = 8? Ziehe die Punkte und entdecke neue Rechnungen!</p>
+	</section>
+
+	<NumberLine client:visible min={0} max={15} highlights={[3, 8]} label="Ziehe die Punkte: Blau = Start, Orange = Ergebnis" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Rechengesetze</h3>
+		<p><strong>Kommutativgesetz:</strong> 3 + 5 = 5 + 3 — die Reihenfolge ist bei Addition und Multiplikation egal!</p>
+		<p><strong>Assoziativgesetz:</strong> (2 + 3) + 4 = 2 + (3 + 4) — die Klammern darf man verschieben.</p>
+		<p><strong>Distributivgesetz:</strong> 3 × (4 + 2) = 3×4 + 3×2 — Multiplikation darf man verteilen.</p>
+
+		<h3>🎯 Warum ist das wichtig?</h3>
+		<p>Diese Gesetze helfen dir, im Kopf schneller zu rechnen! Beispiel: 7 × 8 = 7 × (10 − 2) = 70 − 14 = 56</p>
+	</section>
+</Layout>

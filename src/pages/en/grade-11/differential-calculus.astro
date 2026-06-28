@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Differential Calculus" lang="en" backHref="/explore-math/en/grade-11/" backLabel="← Grade 11">
+	<h1 class="text-3xl font-bold mb-2">Differential Calculus</h1>
+	<p class="text-lg text-slate-600 mb-8">Derivative as slope — foundations of calculus</p>
+	<section class="prose max-w-none">
+		<h2>The Derivative</h2>
+		<p>The derivative gives the instantaneous rate of change — the slope of the tangent.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Observe f(x) = x²:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x) => x*x} fnLabel="f(x) = x²" xMin={-3} xMax={3} yMin={-1} yMax={9} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Rules</h3>
+		<ul><li>f(x) = xⁿ → f'(x) = n·xⁿ⁻¹</li><li>f(x) = eˣ → f'(x) = eˣ</li><li>f(x) = sin(x) → f'(x) = cos(x)</li><li>Sum rule: (f+g)' = f' + g'</li></ul>
+	</section>
+</Layout>

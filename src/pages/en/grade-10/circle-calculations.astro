@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Circle Calculations" lang="en" backHref="/explore-math/en/grade-10/" backLabel="← Grade 10">
+	<h1 class="text-3xl font-bold mb-2">Circle Calculations</h1>
+	<p class="text-lg text-slate-600 mb-8">Circumference, area, sectors and arc length</p>
+	<section class="prose max-w-none">
+		<h2>The Circle and π</h2>
+		<p>π is the ratio of circumference to diameter — for every circle!</p>
+		<h3>🧪 Experiment</h3>
+		<p>Change the radius:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, r) => r * Math.sqrt(Math.max(0, 1 - x*x))} fnLabel="Semicircle" showSlider={true} sliderLabel="r" sliderMin={1} sliderMax={4} sliderStep={0.5} xMin={-2} xMax={2} yMin={-1} yMax={5} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Formulas</h3>
+		<ul><li>Circumference: C = 2·π·r</li><li>Area: A = π·r²</li><li>Arc length: s = (θ/360°)·2πr</li><li>Sector area: A = (θ/360°)·πr²</li></ul>
+	</section>
+</Layout>

@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Curve Analysis" lang="en" backHref="/explore-math/en/grade-11/" backLabel="← Grade 11">
+	<h1 class="text-3xl font-bold mb-2">Curve Analysis</h1>
+	<p class="text-lg text-slate-600 mb-8">Completely analyze functions</p>
+	<section class="prose max-w-none">
+		<h2>Everything About a Function</h2>
+		<p>Zeros, extrema, inflection points — derivatives reveal all.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Analyze f(x) = x³ − 3x:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x) => x*x*x - 3*x} fnLabel="f(x) = x³ − 3x" xMin={-3} xMax={3} yMin={-5} yMax={5} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Checklist</h3>
+		<ul><li>Zeros: f(x) = 0</li><li>Extrema: f'(x) = 0</li><li>Inflection: f''(x) = 0</li><li>Increasing: f'(x) &gt; 0</li></ul>
+	</section>
+</Layout>

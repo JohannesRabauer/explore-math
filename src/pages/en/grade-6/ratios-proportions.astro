@@ -1,0 +1,26 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FractionVisualizer from '../../../components/diagrams/FractionVisualizer.svelte';
+---
+
+<Layout title="Ratios and Proportions" lang="en" backHref="/explore-math/en/grade-6/" backLabel="← Grade 6">
+	<h1 class="text-3xl font-bold mb-2">Ratios and Proportions</h1>
+	<p class="text-lg text-slate-600 mb-8">Recognize and apply ratios</p>
+
+	<section class="prose max-w-none">
+		<h2>What is a ratio?</h2>
+		<p>A ratio compares two quantities: "For every 3 apples there are 2 pears" = 3:2. Ratios are everywhere: in recipes, maps, mixtures.</p>
+
+		<h3>🧪 Experiment: Seeing Ratios</h3>
+		<p>If the ratio is 3:5, what fraction is colored? Try different ratios:</p>
+	</section>
+
+	<FractionVisualizer client:visible numerator={3} denominator={5} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Proportions</h3>
+		<p>When two ratios are equal, it's called a <strong>proportion</strong>: 2:3 = 4:6 = 6:9</p>
+		<p><strong>Rule of three:</strong> 3 apples cost €1.50. How much do 7 apples cost?</p>
+		<p>3 → €1.50 | 1 → €0.50 | 7 → €3.50</p>
+	</section>
+</Layout>

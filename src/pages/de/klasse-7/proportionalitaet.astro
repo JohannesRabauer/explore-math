@@ -1,0 +1,28 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Proportionalität" lang="de" backHref="/explore-math/de/klasse-7/" backLabel="← Klasse 7">
+	<h1 class="text-3xl font-bold mb-2">Proportionalität</h1>
+	<p class="text-lg text-slate-600 mb-8">Direkte und indirekte Proportionalität erkennen</p>
+
+	<section class="prose max-w-none">
+		<h2>Wenn mehr auch wirklich mehr bedeutet</h2>
+		<p><strong>Direkte Proportionalität:</strong> Doppelt so viel Benzin → doppelt so weit fahren. Der Graph ist eine Gerade durch den Ursprung.</p>
+		<p><strong>Indirekte Proportionalität:</strong> Doppelt so viele Arbeiter → halb so viel Zeit. Der Graph ist eine Hyperbel.</p>
+
+		<h3>🧪 Experiment: Proportionalität sehen</h3>
+		<p>Die Gerade y = a·x geht immer durch (0,0). Verändere a — das ist der Proportionalitätsfaktor!</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="y = a·x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={3} sliderStep={0.25} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Erkennung</h3>
+		<ul>
+			<li><strong>Direkt proportional:</strong> y/x = konstant (Quotient gleich)</li>
+			<li><strong>Indirekt proportional:</strong> x·y = konstant (Produkt gleich)</li>
+		</ul>
+	</section>
+</Layout>

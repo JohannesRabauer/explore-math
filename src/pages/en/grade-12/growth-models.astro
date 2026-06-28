@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Growth Models" lang="en" backHref="/explore-math/en/grade-12/" backLabel="← Grade 12">
+	<h1 class="text-3xl font-bold mb-2">Growth Models</h1>
+	<p class="text-lg text-slate-600 mb-8">Model exponential and logistic growth</p>
+	<section class="prose max-w-none">
+		<h2>Growth in Nature</h2>
+		<p>Unlimited vs. limited growth — the logistic function.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Logistic curve:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, k) => 1/(1+Math.exp(-k*x))} fnLabel="1/(1+e^(-kx))" showSlider={true} sliderLabel="k" sliderMin={0.5} sliderMax={3} sliderStep={0.25} xMin={-5} xMax={5} yMin={0} yMax={1.2} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Models</h3>
+		<ul><li>Exponential: f'(t) = k·f(t)</li><li>Bounded: f'(t) = k·(S−f(t))</li><li>Logistic: S-shaped curve</li></ul>
+	</section>
+</Layout>

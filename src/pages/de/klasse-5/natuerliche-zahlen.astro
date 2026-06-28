@@ -1,0 +1,40 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import NumberLine from '../../../components/diagrams/NumberLine.svelte';
+---
+
+<Layout title="Natürliche Zahlen" lang="de" backHref="/explore-math/de/klasse-5/" backLabel="← Klasse 5">
+	<h1 class="text-3xl font-bold mb-2">Natürliche Zahlen</h1>
+	<p class="text-lg text-slate-600 mb-8">Zahlensysteme verstehen und mit großen Zahlen arbeiten</p>
+
+	<section class="prose max-w-none">
+		<h2>Was sind natürliche Zahlen?</h2>
+		<p>Natürliche Zahlen sind die Zahlen, mit denen wir zählen: 1, 2, 3, 4, 5, ... Sie sind die einfachsten und grundlegendsten Zahlen in der Mathematik. Mit ihnen zählen wir Äpfel, Tage, Schritte — alles, was wir abzählen können.</p>
+
+		<h3>🧪 Experiment: Der Zahlenstrahl</h3>
+		<p>Ziehe den Punkt auf dem Zahlenstrahl. Jede natürliche Zahl hat genau einen festen Platz — und zwischen zwei benachbarten Zahlen passt keine weitere natürliche Zahl!</p>
+	</section>
+
+	<NumberLine client:visible min={0} max={20} label="Ziehe den Punkt entlang des Zahlenstrahls!" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Was haben wir entdeckt?</h3>
+		<ul>
+			<li>Natürliche Zahlen liegen <strong>gleichmäßig verteilt</strong> auf dem Zahlenstrahl</li>
+			<li>Zwischen zwei benachbarten natürlichen Zahlen gibt es keine weitere</li>
+			<li>Es gibt keine größte natürliche Zahl — sie gehen <strong>unendlich</strong> weiter</li>
+			<li>Die Null ist der Startpunkt (manchmal zählt man sie dazu, manchmal nicht)</li>
+		</ul>
+
+		<h3>📐 Die Stellenwerttafel</h3>
+		<p>Unser Zahlensystem basiert auf dem Prinzip der <strong>Bündelung in Zehnergruppen</strong>:</p>
+		<table>
+			<tr><th>Tausender</th><th>Hunderter</th><th>Zehner</th><th>Einer</th></tr>
+			<tr><td>4</td><td>7</td><td>3</td><td>8</td></tr>
+		</table>
+		<p>4738 = 4×1000 + 7×100 + 3×10 + 8×1</p>
+
+		<h3>🎯 Denk nach!</h3>
+		<p>Warum benutzen wir genau 10 Ziffern (0-9)? Das liegt daran, dass wir 10 Finger haben! Andere Kulturen nutzten andere Systeme — die Maya rechneten mit 20, Computer mit 2.</p>
+	</section>
+</Layout>

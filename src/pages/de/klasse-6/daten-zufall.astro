@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ProbabilitySimulator from '../../../components/diagrams/ProbabilitySimulator.svelte';
+---
+
+<Layout title="Daten und Zufall" lang="de" backHref="/explore-math/de/klasse-6/" backLabel="← Klasse 6">
+	<h1 class="text-3xl font-bold mb-2">Daten und Zufall</h1>
+	<p class="text-lg text-slate-600 mb-8">Erste Schritte in Statistik und Wahrscheinlichkeit</p>
+
+	<section class="prose max-w-none">
+		<h2>Ist das wirklich Zufall?</h2>
+		<p>Wenn du einen Würfel wirfst — ist jede Zahl gleich wahrscheinlich? Theoretisch ja: jede hat die Wahrscheinlichkeit 1/6 ≈ 16,7%. Aber wie sieht das in der Praxis aus?</p>
+
+		<h3>🧪 Experiment: Würfel-Simulation</h3>
+		<p>Würfle viele Male und beobachte: Je öfter du würfelst, desto näher kommt jede Zahl an 16,7%!</p>
+	</section>
+
+	<ProbabilitySimulator client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Das Gesetz der großen Zahlen</h3>
+		<p>Bei wenigen Würfen ist alles möglich. Aber bei <strong>vielen Wiederholungen</strong> nähert sich die relative Häufigkeit der theoretischen Wahrscheinlichkeit an.</p>
+		<ul>
+			<li><strong>Wahrscheinlichkeit</strong> = günstige Ergebnisse ÷ mögliche Ergebnisse</li>
+			<li>Beim Würfel: P(6) = 1/6</li>
+			<li>Bei 100 Würfen: erwarte ca. 16-17 Sechsen</li>
+		</ul>
+	</section>
+</Layout>

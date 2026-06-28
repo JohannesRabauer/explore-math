@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import NumberLine from '../../../components/diagrams/NumberLine.svelte';
+---
+
+<Layout title="Dezimalzahlen" lang="de" backHref="/explore-math/de/klasse-6/" backLabel="← Klasse 6">
+	<h1 class="text-3xl font-bold mb-2">Dezimalzahlen</h1>
+	<p class="text-lg text-slate-600 mb-8">Dezimalzahlen verstehen und umrechnen</p>
+
+	<section class="prose max-w-none">
+		<h2>Brüche als Dezimalzahlen</h2>
+		<p>Dezimalzahlen sind nur eine andere Schreibweise für Brüche! ½ = 0,5 und ¼ = 0,25. Die Stellen nach dem Komma sind Zehntel, Hundertstel, Tausendstel...</p>
+
+		<h3>🧪 Experiment: Dezimalzahlen auf dem Zahlenstrahl</h3>
+		<p>Sieh, wie Dezimalzahlen zwischen den ganzen Zahlen liegen:</p>
+	</section>
+
+	<NumberLine client:visible min={0} max={10} label="Finde die Position von 3,5 auf dem Zahlenstrahl!" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Umrechnung</h3>
+		<ul>
+			<li>Bruch → Dezimal: Zähler durch Nenner teilen (3/4 = 3÷4 = 0,75)</li>
+			<li>Dezimal → Bruch: Nachkommastellen als Zehntel/Hundertstel (0,3 = 3/10)</li>
+			<li>Periodische Dezimalzahlen: ⅓ = 0,333... (unendlich viele Dreien!)</li>
+		</ul>
+		<h3>Rechnen mit Dezimalzahlen</h3>
+		<p>Beim Addieren: Komma unter Komma! Bei der Multiplikation: Nachkommastellen zählen.</p>
+	</section>
+</Layout>

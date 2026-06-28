@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Wachstumsmodelle" lang="de" backHref="/explore-math/de/klasse-12/" backLabel="← Klasse 12">
+	<h1 class="text-3xl font-bold mb-2">Wachstumsmodelle</h1>
+	<p class="text-lg text-slate-600 mb-8">Exponentielles und logistisches Wachstum</p>
+	<section class="prose max-w-none">
+		<h2>Wachstum in der Natur</h2>
+		<p>Unbegrenztes vs. begrenztes Wachstum — die logistische Funktion.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Logistische Kurve:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, k) => 1/(1+Math.exp(-k*x))} fnLabel="1/(1+e^(-kx))" showSlider={true} sliderLabel="k" sliderMin={0.5} sliderMax={3} sliderStep={0.25} xMin={-5} xMax={5} yMin={0} yMax={1.2} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Modelle</h3>
+		<ul><li>Exponentiell: f'(t) = k·f(t)</li><li>Beschränkt: f'(t) = k·(S−f(t))</li><li>Logistisch: S-förmige Kurve</li></ul>
+	</section>
+</Layout>

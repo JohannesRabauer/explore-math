@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Logarithmen" lang="de" backHref="/explore-math/de/klasse-10/" backLabel="← Klasse 10">
+	<h1 class="text-3xl font-bold mb-2">Logarithmen</h1>
+	<p class="text-lg text-slate-600 mb-8">Die Umkehrung des Potenzierens verstehen</p>
+	<section class="prose max-w-none">
+		<h2>Was ist ein Logarithmus?</h2>
+		<p>log_a(x) beantwortet: Welche Potenz von a ergibt x? log₂(8) = 3, weil 2³ = 8.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Die Logarithmusfunktion:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => x > 0 ? Math.log(x)/Math.log(a) : undefined} fnLabel="y = log_a(x)" showSlider={true} sliderLabel="a" sliderMin={1.5} sliderMax={3} sliderStep={0.25} xMin={0} xMax={5} yMin={-3} yMax={3} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Logarithmengesetze</h3>
+		<ul><li>log(a·b) = log(a) + log(b)</li><li>log(a/b) = log(a) − log(b)</li><li>log(aⁿ) = n·log(a)</li><li>ln = natürlicher Logarithmus (Basis e)</li></ul>
+	</section>
+</Layout>

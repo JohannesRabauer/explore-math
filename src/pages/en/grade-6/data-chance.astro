@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ProbabilitySimulator from '../../../components/diagrams/ProbabilitySimulator.svelte';
+---
+
+<Layout title="Data and Chance" lang="en" backHref="/explore-math/en/grade-6/" backLabel="← Grade 6">
+	<h1 class="text-3xl font-bold mb-2">Data and Chance</h1>
+	<p class="text-lg text-slate-600 mb-8">First steps in statistics and probability</p>
+
+	<section class="prose max-w-none">
+		<h2>Is it really random?</h2>
+		<p>When you roll a die — is every number equally likely? Theoretically yes: each has probability 1/6 ≈ 16.7%. But what does it look like in practice?</p>
+
+		<h3>🧪 Experiment: Dice Simulation</h3>
+		<p>Roll many times and observe: the more you roll, the closer each number gets to 16.7%!</p>
+	</section>
+
+	<ProbabilitySimulator client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 The Law of Large Numbers</h3>
+		<p>With few rolls, anything can happen. But with <strong>many repetitions</strong>, the relative frequency approaches the theoretical probability.</p>
+		<ul>
+			<li><strong>Probability</strong> = favorable outcomes ÷ possible outcomes</li>
+			<li>For a die: P(6) = 1/6</li>
+			<li>In 100 rolls: expect about 16-17 sixes</li>
+		</ul>
+	</section>
+</Layout>

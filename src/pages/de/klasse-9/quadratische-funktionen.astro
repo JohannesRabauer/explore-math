@@ -1,0 +1,28 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Quadratische Funktionen" lang="de" backHref="/explore-math/de/klasse-9/" backLabel="← Klasse 9">
+	<h1 class="text-3xl font-bold mb-2">Quadratische Funktionen</h1>
+	<p class="text-lg text-slate-600 mb-8">Parabeln verstehen und Scheitelpunkt bestimmen</p>
+
+	<section class="prose max-w-none">
+		<h2>Die Parabel: y = a·x²</h2>
+		<p>Quadratische Funktionen erzeugen Parabeln — U-förmige Kurven. Der Parameter <strong>a</strong> bestimmt, wie breit oder schmal die Parabel ist und ob sie nach oben oder unten geöffnet ist.</p>
+		<h3>🧪 Experiment: Parabeln formen</h3>
+		<p>Verändere a und beobachte: Wann wird die Parabel schmaler? Wann öffnet sie sich nach unten?</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, a) => a * x * x} fnLabel="y = a·x²" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.1} yMin={-5} yMax={10} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Scheitelpunktform</h3>
+		<p>y = a·(x − d)² + e → Scheitelpunkt bei (d, e)</p>
+		<ul>
+			<li>a > 0: nach oben geöffnet (Minimum am Scheitelpunkt)</li>
+			<li>a < 0: nach unten geöffnet (Maximum am Scheitelpunkt)</li>
+			<li>|a| groß: schmale Parabel. |a| klein: breite Parabel</li>
+		</ul>
+	</section>
+</Layout>

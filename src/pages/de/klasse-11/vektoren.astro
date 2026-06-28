@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Vektoren" lang="de" backHref="/explore-math/de/klasse-11/" backLabel="← Klasse 11">
+	<h1 class="text-3xl font-bold mb-2">Vektoren</h1>
+	<p class="text-lg text-slate-600 mb-8">Rechnen im Raum mit Vektoren</p>
+	<section class="prose max-w-none">
+		<h2>Richtung und Länge</h2>
+		<p>Ein Vektor hat Richtung und Betrag. Er beschreibt eine Verschiebung: v = (x, y, z).</p>
+		<h3>🧪 Experiment</h3>
+		<p>Richtungsvektoren als Geraden:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="Richtung (1, a)" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.25} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Operationen</h3>
+		<ul><li>Addition: komponentenweise</li><li>Skalarprodukt: a·b = a₁b₁ + a₂b₂ + a₃b₃</li><li>Betrag: |v| = √(x² + y² + z²)</li><li>Orthogonal wenn a·b = 0</li></ul>
+	</section>
+</Layout>

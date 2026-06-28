@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GeometryCanvas from '../../../components/diagrams/GeometryCanvas.svelte';
+---
+
+<Layout title="Dreiecke" lang="de" backHref="/explore-math/de/klasse-7/" backLabel="← Klasse 7">
+	<h1 class="text-3xl font-bold mb-2">Dreiecke</h1>
+	<p class="text-lg text-slate-600 mb-8">Dreieckskonstruktion und Kongruenzsätze</p>
+
+	<section class="prose max-w-none">
+		<h2>Wann sind zwei Dreiecke gleich?</h2>
+		<p>Zwei Dreiecke sind <strong>kongruent</strong> (deckungsgleich), wenn sie die gleiche Form UND Größe haben. Aber welche Angaben reichen, um ein Dreieck eindeutig zu bestimmen?</p>
+
+		<h3>🧪 Experiment: Dreiecke konstruieren</h3>
+		<p>Ziehe die Punkte und beobachte die Kongruenzsätze in Aktion!</p>
+	</section>
+
+	<GeometryCanvas client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Die Kongruenzsätze</h3>
+		<ul>
+			<li><strong>SSS:</strong> Drei Seiten bestimmen ein Dreieck eindeutig</li>
+			<li><strong>SWS:</strong> Zwei Seiten und der eingeschlossene Winkel</li>
+			<li><strong>WSW:</strong> Eine Seite und die anliegenden Winkel</li>
+			<li><strong>SSW:</strong> Zwei Seiten und der gegenüberliegende Winkel (Achtung: nicht immer eindeutig!)</li>
+		</ul>
+	</section>
+</Layout>

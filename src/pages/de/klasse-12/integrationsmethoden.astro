@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Integrationsmethoden" lang="de" backHref="/explore-math/de/klasse-12/" backLabel="← Klasse 12">
+	<h1 class="text-3xl font-bold mb-2">Integrationsmethoden</h1>
+	<p class="text-lg text-slate-600 mb-8">Substitution, partielle Integration und mehr</p>
+	<section class="prose max-w-none">
+		<h2>Schwierige Integrale</h2>
+		<p>Nicht jedes Integral ist direkt lösbar. Substitution und partielle Integration helfen.</p>
+		<h3>🧪 Experiment</h3>
+		<p>f(x) = x·eˣ:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x) => x * Math.exp(x) * 0.1} fnLabel="x·eˣ (skaliert)" xMin={-5} xMax={3} yMin={-1} yMax={3} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Methoden</h3>
+		<ul><li>Substitution: ∫f(g(x))·g'(x)dx</li><li>Partielle Integration: ∫u·v' = u·v − ∫u'·v</li><li>Partialbruchzerlegung</li></ul>
+	</section>
+</Layout>

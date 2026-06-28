@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GeometryCanvas from '../../../components/diagrams/GeometryCanvas.svelte';
+---
+
+<Layout title="Flächen und Körper" lang="de" backHref="/explore-math/de/klasse-8/" backLabel="← Klasse 8">
+	<h1 class="text-3xl font-bold mb-2">Flächen und Körper</h1>
+	<p class="text-lg text-slate-600 mb-8">Oberfläche und Volumen von Prismen und Zylindern</p>
+
+	<section class="prose max-w-none">
+		<h2>Von 2D zu 3D</h2>
+		<p>Ein Prisma entsteht, wenn man eine Fläche "nach oben zieht". Das Volumen = Grundfläche × Höhe. Die Oberfläche = 2 × Grundfläche + Mantel.</p>
+
+		<h3>🧪 Experiment: Grundflächen</h3>
+		<p>Verändere die Grundfläche des Dreiecks — das Volumen des Prismas ist diese Fläche mal die Höhe!</p>
+	</section>
+
+	<GeometryCanvas client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Formeln</h3>
+		<ul>
+			<li><strong>Prisma:</strong> V = G · h, O = 2G + M</li>
+			<li><strong>Zylinder:</strong> V = π·r²·h, O = 2·π·r² + 2·π·r·h</li>
+			<li><strong>Pyramide:</strong> V = ⅓ · G · h</li>
+			<li><strong>Kegel:</strong> V = ⅓ · π·r² · h</li>
+		</ul>
+		<p>Merke: Spitze Körper (Pyramide, Kegel) haben ⅓ des Volumens ihrer "geraden" Verwandten!</p>
+	</section>
+</Layout>

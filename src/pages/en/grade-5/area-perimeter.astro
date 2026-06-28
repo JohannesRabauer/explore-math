@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GeometryCanvas from '../../../components/diagrams/GeometryCanvas.svelte';
+---
+
+<Layout title="Area and Perimeter" lang="en" backHref="/explore-math/en/grade-5/" backLabel="← Grade 5">
+	<h1 class="text-3xl font-bold mb-2">Area and Perimeter</h1>
+	<p class="text-lg text-slate-600 mb-8">Calculate rectangles, squares and their measurements</p>
+
+	<section class="prose max-w-none">
+		<h2>Perimeter vs. Area</h2>
+		<p><strong>Perimeter</strong> = the length around the edge (how much fence do you need?)</p>
+		<p><strong>Area</strong> = the space inside (how much grass do you need?)</p>
+
+		<h3>🧪 Experiment: Changing Shapes</h3>
+		<p>Drag the points and observe how the area changes. Can a triangle with the same perimeter have different areas?</p>
+	</section>
+
+	<GeometryCanvas client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Key Formulas</h3>
+		<ul>
+			<li><strong>Rectangle:</strong> Perimeter = 2·(a+b), Area = a·b</li>
+			<li><strong>Square:</strong> Perimeter = 4·a, Area = a·a = a²</li>
+			<li><strong>Triangle:</strong> Area = (base × height) ÷ 2</li>
+		</ul>
+		<p>Surprise: Two shapes with the same perimeter can have completely different areas!</p>
+	</section>
+</Layout>

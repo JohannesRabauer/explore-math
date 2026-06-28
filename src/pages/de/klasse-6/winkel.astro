@@ -1,0 +1,31 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import AngleExplorer from '../../../components/diagrams/AngleExplorer.svelte';
+---
+
+<Layout title="Winkel" lang="de" backHref="/explore-math/de/klasse-6/" backLabel="← Klasse 6">
+	<h1 class="text-3xl font-bold mb-2">Winkel</h1>
+	<p class="text-lg text-slate-600 mb-8">Winkel messen, zeichnen und berechnen</p>
+
+	<section class="prose max-w-none">
+		<h2>Was ist ein Winkel?</h2>
+		<p>Ein Winkel entsteht, wenn zwei Strahlen vom gleichen Punkt ausgehen. Wir messen Winkel in <strong>Grad (°)</strong>. Eine volle Drehung = 360°.</p>
+
+		<h3>🧪 Experiment: Winkelarten entdecken</h3>
+		<p>Ziehe den Regler und beobachte, wie sich der Winkel verändert. Bei welchen Gradzahlen wechselt die Winkelart?</p>
+	</section>
+
+	<AngleExplorer client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Winkelarten</h3>
+		<ul>
+			<li><strong>Spitzer Winkel:</strong> 0° bis 90°</li>
+			<li><strong>Rechter Winkel:</strong> genau 90°</li>
+			<li><strong>Stumpfer Winkel:</strong> 90° bis 180°</li>
+			<li><strong>Gestreckter Winkel:</strong> genau 180°</li>
+			<li><strong>Überstumpfer Winkel:</strong> 180° bis 360°</li>
+		</ul>
+		<p>Nebenwinkel ergänzen sich zu 180°. Scheitelwinkel sind gleich groß!</p>
+	</section>
+</Layout>

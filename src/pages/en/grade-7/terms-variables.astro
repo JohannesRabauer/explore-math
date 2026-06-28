@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Terms and Variables" lang="en" backHref="/explore-math/en/grade-7/" backLabel="← Grade 7">
+	<h1 class="text-3xl font-bold mb-2">Terms and Variables</h1>
+	<p class="text-lg text-slate-600 mb-8">Learn to calculate with letters</p>
+
+	<section class="prose max-w-none">
+		<h2>Why letters in mathematics?</h2>
+		<p>Variables are placeholders for numbers. Instead of "a number plus 3" we write <strong>x + 3</strong>. It's shorter and lets us write general rules.</p>
+
+		<h3>🧪 Experiment: Evaluating Terms</h3>
+		<p>The term 2x + 1 gives a different value for each x. Change x and see the result:</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x) => 2*x + 1} fnLabel="f(x) = 2x + 1" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Simplifying Terms</h3>
+		<ul>
+			<li><strong>Combining:</strong> 3x + 2x = 5x (add like terms)</li>
+			<li><strong>Expanding:</strong> 2·(x + 3) = 2x + 6</li>
+			<li><strong>Factoring:</strong> 6x + 9 = 3·(2x + 3)</li>
+		</ul>
+		<p>Remember: You can only combine <strong>like</strong> terms! 3x + 2y stays 3x + 2y.</p>
+	</section>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Terme und Variablen" lang="de" backHref="/explore-math/de/klasse-7/" backLabel="← Klasse 7">
+	<h1 class="text-3xl font-bold mb-2">Terme und Variablen</h1>
+	<p class="text-lg text-slate-600 mb-8">Mit Buchstaben rechnen lernen</p>
+
+	<section class="prose max-w-none">
+		<h2>Warum Buchstaben in der Mathematik?</h2>
+		<p>Variablen sind Platzhalter für Zahlen. Statt "eine Zahl plus 3" schreiben wir <strong>x + 3</strong>. Das ist kürzer und wir können damit allgemeine Regeln aufschreiben.</p>
+
+		<h3>🧪 Experiment: Terme auswerten</h3>
+		<p>Der Term 2x + 1 ergibt für jedes x einen anderen Wert. Verändere x und sieh das Ergebnis:</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x) => 2*x + 1} fnLabel="f(x) = 2x + 1" />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Terme vereinfachen</h3>
+		<ul>
+			<li><strong>Zusammenfassen:</strong> 3x + 2x = 5x (gleiche Variablen addieren)</li>
+			<li><strong>Ausmultiplizieren:</strong> 2·(x + 3) = 2x + 6</li>
+			<li><strong>Ausklammern:</strong> 6x + 9 = 3·(2x + 3)</li>
+		</ul>
+		<p>Merke: Man kann nur <strong>gleiche</strong> Variablen zusammenfassen! 3x + 2y bleibt 3x + 2y.</p>
+	</section>
+</Layout>

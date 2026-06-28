@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Integralrechnung" lang="de" backHref="/explore-math/de/klasse-12/" backLabel="← Klasse 12">
+	<h1 class="text-3xl font-bold mb-2">Integralrechnung</h1>
+	<p class="text-lg text-slate-600 mb-8">Flächen unter Kurven berechnen</p>
+	<section class="prose max-w-none">
+		<h2>Das Integral</h2>
+		<p>Integration ist die Umkehrung der Ableitung und berechnet Flächen unter Kurven.</p>
+		<h3>🧪 Experiment</h3>
+		<p>Fläche unter f(x) = a·x:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, a) => a * x} fnLabel="f(x) = a·x" showSlider={true} sliderLabel="a" sliderMin={0.5} sliderMax={2} sliderStep={0.25} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Grundlagen</h3>
+		<ul><li>∫xⁿ dx = xⁿ⁺¹/(n+1) + C</li><li>∫eˣ dx = eˣ + C</li><li>∫sin(x) dx = −cos(x) + C</li><li>Bestimmtes Integral: F(b) − F(a)</li></ul>
+	</section>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PythagorasExplorer from '../../../components/diagrams/PythagorasExplorer.svelte';
+---
+
+<Layout title="Satz des Pythagoras" lang="de" backHref="/explore-math/de/klasse-8/" backLabel="← Klasse 8">
+	<h1 class="text-3xl font-bold mb-2">Satz des Pythagoras</h1>
+	<p class="text-lg text-slate-600 mb-8">Den berühmtesten Satz der Geometrie entdecken</p>
+
+	<section class="prose max-w-none">
+		<h2>a² + b² = c²</h2>
+		<p>In jedem rechtwinkligen Dreieck gilt: Die Summe der Quadrate über den beiden kurzen Seiten (Katheten) ist gleich dem Quadrat über der langen Seite (Hypotenuse).</p>
+
+		<h3>🧪 Experiment: Pythagoras erleben</h3>
+		<p>Verändere die Katheten a und b. Beobachte, wie c sich ergibt — und wie die Flächengleichung stimmt!</p>
+	</section>
+
+	<PythagorasExplorer client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Anwendungen</h3>
+		<ul>
+			<li><strong>Abstand berechnen:</strong> d = √((x₂−x₁)² + (y₂−y₁)²)</li>
+			<li><strong>Prüfen ob rechtwinklig:</strong> Wenn 3² + 4² = 5² → rechtwinklig!</li>
+			<li><strong>Pythagoreische Tripel:</strong> (3,4,5), (5,12,13), (8,15,17)...</li>
+		</ul>
+		<p>Der Satz funktioniert NUR bei rechtwinkligen Dreiecken. Die Hypotenuse ist IMMER die längste Seite!</p>
+	</section>
+</Layout>

@@ -1,0 +1,28 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Quadratic Functions" lang="en" backHref="/explore-math/en/grade-9/" backLabel="← Grade 9">
+	<h1 class="text-3xl font-bold mb-2">Quadratic Functions</h1>
+	<p class="text-lg text-slate-600 mb-8">Understand parabolas and find the vertex</p>
+
+	<section class="prose max-w-none">
+		<h2>The Parabola: y = a·x²</h2>
+		<p>Quadratic functions create parabolas — U-shaped curves. Parameter <strong>a</strong> determines width and whether it opens up or down.</p>
+		<h3>🧪 Experiment: Shaping Parabolas</h3>
+		<p>Change a and observe: When does the parabola get narrower? When does it open downward?</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, a) => a * x * x} fnLabel="y = a·x²" showSlider={true} sliderLabel="a" sliderMin={-2} sliderMax={2} sliderStep={0.1} yMin={-5} yMax={10} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Vertex Form</h3>
+		<p>y = a·(x − h)² + k → Vertex at (h, k)</p>
+		<ul>
+			<li>a > 0: opens upward (minimum at vertex)</li>
+			<li>a < 0: opens downward (maximum at vertex)</li>
+			<li>|a| large: narrow parabola. |a| small: wide parabola</li>
+		</ul>
+	</section>
+</Layout>

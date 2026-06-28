@@ -1,0 +1,20 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Kreisberechnungen" lang="de" backHref="/explore-math/de/klasse-10/" backLabel="← Klasse 10">
+	<h1 class="text-3xl font-bold mb-2">Kreisberechnungen</h1>
+	<p class="text-lg text-slate-600 mb-8">Umfang, Fläche, Kreissektoren und Bogenlänge</p>
+	<section class="prose max-w-none">
+		<h2>Der Kreis und π</h2>
+		<p>π ist das Verhältnis von Umfang zu Durchmesser — bei jedem Kreis!</p>
+		<h3>🧪 Experiment</h3>
+		<p>Verändere den Radius:</p>
+	</section>
+	<FunctionPlotter client:visible fn={(x, r) => r * Math.sqrt(Math.max(0, 1 - x*x))} fnLabel="Halbkreis" showSlider={true} sliderLabel="r" sliderMin={1} sliderMax={4} sliderStep={0.5} xMin={-2} xMax={2} yMin={-1} yMax={5} />
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Formeln</h3>
+		<ul><li>Umfang: U = 2·π·r</li><li>Fläche: A = π·r²</li><li>Bogenlänge: b = (α/360°)·2πr</li><li>Sektorfläche: A = (α/360°)·πr²</li></ul>
+	</section>
+</Layout>

@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import GeometryCanvas from '../../../components/diagrams/GeometryCanvas.svelte';
+---
+
+<Layout title="Flächen und Umfang" lang="de" backHref="/explore-math/de/klasse-5/" backLabel="← Klasse 5">
+	<h1 class="text-3xl font-bold mb-2">Flächen und Umfang</h1>
+	<p class="text-lg text-slate-600 mb-8">Rechtecke, Quadrate und ihre Maße berechnen</p>
+
+	<section class="prose max-w-none">
+		<h2>Umfang vs. Fläche</h2>
+		<p><strong>Umfang</strong> = die Länge des Randes (wie viel Zaun brauchst du?)</p>
+		<p><strong>Fläche</strong> = der Platz im Inneren (wie viel Rasen brauchst du?)</p>
+
+		<h3>🧪 Experiment: Formen verändern</h3>
+		<p>Ziehe die Punkte und beobachte, wie sich die Fläche verändert. Kann ein Dreieck mit gleichem Umfang verschiedene Flächen haben?</p>
+	</section>
+
+	<GeometryCanvas client:visible />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Wichtige Formeln</h3>
+		<ul>
+			<li><strong>Rechteck:</strong> Umfang = 2·(a+b), Fläche = a·b</li>
+			<li><strong>Quadrat:</strong> Umfang = 4·a, Fläche = a·a = a²</li>
+			<li><strong>Dreieck:</strong> Fläche = (Grundseite × Höhe) ÷ 2</li>
+		</ul>
+		<p>Überraschung: Zwei Figuren mit dem gleichen Umfang können völlig verschiedene Flächen haben!</p>
+	</section>
+</Layout>

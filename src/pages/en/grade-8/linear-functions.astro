@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Linear Functions" lang="en" backHref="/explore-math/en/grade-8/" backLabel="← Grade 8">
+	<h1 class="text-3xl font-bold mb-2">Linear Functions</h1>
+	<p class="text-lg text-slate-600 mb-8">Lines, slope and y-intercept</p>
+
+	<section class="prose max-w-none">
+		<h2>The Equation of a Line: y = mx + b</h2>
+		<p><strong>m</strong> = slope (how steep is the line?) and <strong>b</strong> = y-intercept (where does it cross the y-axis?)</p>
+
+		<h3>🧪 Experiment: Changing the Slope</h3>
+		<p>Change slope m and watch how the line rotates!</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, m) => m * x + 1} fnLabel="y = m·x + 1" showSlider={true} sliderLabel="m" sliderMin={-3} sliderMax={3} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Understanding Slope</h3>
+		<ul>
+			<li>m > 0: line rises (uphill left to right)</li>
+			<li>m < 0: line falls (downhill)</li>
+			<li>m = 0: horizontal line</li>
+			<li>m = 1: for every 1 step right, go 1 step up</li>
+		</ul>
+		<p><strong>Rise over run:</strong> m = Δy / Δx = (y₂−y₁) / (x₂−x₁)</p>
+	</section>
+</Layout>

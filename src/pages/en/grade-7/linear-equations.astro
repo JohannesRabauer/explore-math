@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import FunctionPlotter from '../../../components/diagrams/FunctionPlotter.svelte';
+---
+
+<Layout title="Linear Equations" lang="en" backHref="/explore-math/en/grade-7/" backLabel="← Grade 7">
+	<h1 class="text-3xl font-bold mb-2">Linear Equations</h1>
+	<p class="text-lg text-slate-600 mb-8">Set up and solve equations</p>
+
+	<section class="prose max-w-none">
+		<h2>What is an equation?</h2>
+		<p>An equation is like a balance: both sides must be equal. <strong>2x + 3 = 11</strong> — what number must x be?</p>
+		<p>Solving an equation = keeping the balance while isolating x.</p>
+
+		<h3>🧪 Experiment: The Line y = ax + b</h3>
+		<p>Every linear equation y = ax + b creates a straight line. Change parameter a (the slope):</p>
+	</section>
+
+	<FunctionPlotter client:visible fn={(x, a) => a * x + 1} fnLabel="y = a·x + 1" showSlider={true} sliderLabel="a" sliderMin={-3} sliderMax={3} />
+
+	<section class="prose max-w-none mt-8">
+		<h3>💡 Solving Equations — Step by Step</h3>
+		<p>Example: 2x + 3 = 11</p>
+		<ol>
+			<li>Subtract 3 from both sides: 2x = 8</li>
+			<li>Divide both sides by 2: x = 4 ✓</li>
+		</ol>
+		<p><strong>Principle:</strong> Whatever you do to one side, you must do to the other!</p>
+	</section>
+</Layout>
