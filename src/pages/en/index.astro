@@ -1,0 +1,49 @@
+---
+import '../../styles/global.css';
+
+const grades = [
+	{ num: 5, topics: ['Natural Numbers', 'Basic Geometry', 'Introduction to Fractions'] },
+	{ num: 6, topics: ['Fractions', 'Decimals', 'Angles'] },
+	{ num: 7, topics: ['Integers', 'Linear Equations', 'Triangles'] },
+	{ num: 8, topics: ['Linear Functions', 'Pythagorean Theorem', 'Probability'] },
+	{ num: 9, topics: ['Quadratic Functions', 'Powers', 'Trigonometry'] },
+	{ num: 10, topics: ['Exponential Functions', 'Circles', 'Statistics'] },
+	{ num: 11, topics: ['Differential Calculus', 'Vectors', 'Function Analysis'] },
+	{ num: 12, topics: ['Integral Calculus', 'Stochastics', 'Analytical Geometry'] },
+];
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Grades – ExploreMath</title>
+	</head>
+	<body class="bg-slate-50 text-slate-900 min-h-screen">
+		<header class="bg-white border-b border-slate-200">
+			<nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+				<a href="/explore-math/" class="text-2xl font-bold text-indigo-600">ExploreMath</a>
+				<div class="flex gap-4 text-sm">
+					<a href="/explore-math/de/" class="hover:text-indigo-600">Deutsch</a>
+					<span class="text-indigo-600 font-medium">English</span>
+				</div>
+			</nav>
+		</header>
+
+		<main class="max-w-6xl mx-auto px-6 py-12">
+			<h1 class="text-4xl font-bold mb-2">Grades</h1>
+			<p class="text-slate-600 mb-10">Choose your grade level and discover mathematics through experiments.</p>
+
+			<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+				{grades.map((g) => (
+					<div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 hover:border-indigo-300 transition-colors">
+						<div class="text-3xl font-bold text-indigo-600 mb-2">Grade {g.num}</div>
+						<ul class="text-sm text-slate-600 space-y-1">
+							{g.topics.map((t) => <li>• {t}</li>)}
+						</ul>
+					</div>
+				))}
+			</div>
+		</main>
+	</body>
+</html>
